@@ -1,0 +1,55 @@
+{% extends "_layout" %}
+
+{% set imageAttr = {
+  mode: 'crop',
+  width: 400,
+  quality: 90
+} %}
+
+{% js %}
+window.onload = function() {
+    let a = Array.apply(null, document.querySelectorAll(".entry > *"));
+    a.forEach((el, i) => {
+        let d = (i * 0.1);
+        el.style.animationDelay = d + "s";
+        el.classList.add("in");
+    })  
+}
+{% endjs %}
+
+{% block content %}
+<main class="entry entry--inspo">
+
+    <div class="entry__meta">
+        <a href="javascript:history.back();">&larr; Tilbake</a>
+    </div>
+    <h2>{{ entry.title }}</h2>
+    <div class="entry__excerpt">{{ entry.excerpt }}</div>
+
+    {% set links = entry.links.all() %}
+    {% if links|length %}
+    <div class="entry__meta">
+        {% for link in links %}
+        <div class="entry__link">
+            <a href="{{ link.link_url }}">{{ link.link_text }}</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div>
+        <div class="entry__body">
+            <div>
+                {{ entry.body_text }}
+            </div>
+            <div>
+            {% if entry.feature_image|length %}
+                {% for image in entry.feature_image.all() %}
+                <img src="{{ image.getUrl( imageAttr ) }}" alt="{{ image.alt }}">
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+
+</main>
+{% endblock %}

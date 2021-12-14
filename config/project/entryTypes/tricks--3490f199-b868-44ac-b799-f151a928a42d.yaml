@@ -1,0 +1,65 @@
+fieldLayouts:
+  87768037-42e6-4916-86c2-3c343db0eff9:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: f23fb6e2-37bb-494d-a6ed-201392eee988 # Oppsummering
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cecc58c9-98f9-4509-b2f0-6cd51db5cb7e # Hovedbilde
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c99e203e-9aa3-47ec-ba1c-e189dc6aa9be # Brødtekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Innhold
+        sortOrder: 1
+handle: tricks
+hasTitleField: true
+name: 'Tips og triks'
+section: 60e9152a-ba6b-452c-bcc6-428892207bfa # Tips og triks
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

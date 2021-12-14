@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@85,600;100,500;100,600;100,900&display=swap" rel="stylesheet">
+</head>
+<body class="{{ craft.app.request.getSegment(1) }}">
+
+    {% include "_includes/header" %}
+
+    {% block content %}
+    <main>
+        Kunne ikke laste innhold, av en eller annen grunn.
+    </main>
+    {% endblock %}
+
+    {% block footer %}
+    <footer>
+        Et Natlab<sup>®</sup>-prosjekt.
+    </footer>
+    {% endblock %}
+
+</body>
+</html>

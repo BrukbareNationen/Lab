@@ -1,0 +1,56 @@
+dateModified: 1639395125
+email:
+  fromEmail: jarand.ullestad@nationen.no
+  fromName: Lab
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    2b9885e7-4026-45e0-9b91-ab23db9ceac7: Lenker # Lenker
+    6ad60569-f3d5-492f-9a84-621ba4029f01: 'Slik gjør du' # Slik gjør du
+    7c52f0e9-6e2e-4187-b07c-a85987a0ae8a: Sidebeskrivelse # Sidebeskrivelse
+    7cc85b02-cb52-4fe7-bdba-b2323aaf31a7: Kodesnutter-felter # Kodesnutter-felter
+    8c14e8b7-f928-4d57-864e-96ca3f58ecfb: Inspirasjon-felter # Inspirasjon-felter
+    9f8e4d0a-efa9-4326-aa97-e12ea9f90322: Lenke # Lenke
+    12c43602-5522-4612-8789-89627a2bcb0f: Meny # Meny
+    29ea60c5-d06b-4b6c-9eec-260ecc54721f: Meny # Meny
+    34ba5c58-1f33-4d1d-8df8-73cca7ff1c66: Lenketekst # Lenketekst
+    57a01c16-6c6f-4438-83c4-50bea3c1e1be: Kodesnutter # Kodesnutter
+    60e9152a-ba6b-452c-bcc6-428892207bfa: 'Tips og triks' # Tips og triks
+    459d3b34-d55f-4c02-bf87-b63eabc70ffd: Lenkeadresse # Lenkeadresse
+    915c2d57-d23f-4e55-ab1f-1398020167fc: Kodesnutter # Kodesnutter
+    3490f199-b868-44ac-b799-f151a928a42d: 'Tips og triks' # Tips og triks
+    08715e09-2b04-4737-8933-c71821979f91: SVG # SVG
+    a1e2c619-c7bb-4e93-a8ad-706d14b6a2ea: Meny-felter # Meny-felter
+    a6a298dc-ff02-47c4-b8e6-9c7d3cbe4590: Kode # Kode
+    a11fd13b-0ecf-4500-b3ee-03e790c72ef1: Media # Media
+    a9196df9-350e-4141-9724-eabb9295bb67: Lenke # Lenke
+    a94191bb-057f-466a-823c-c121390522ed: Alt-tekst # Alt-tekst
+    ab44a115-1c86-422c-aa37-88117c577abc: Lab # Lab
+    b09e2feb-98df-440f-8a53-ad2938ecfbe9: Globaler-felter # Globaler-felter
+    b1fcf98b-3e68-44ae-abbd-8e6ddaeca117: Inspirasjon # Inspirasjon
+    bade9013-b550-4c8e-b854-090d585d62ad: Felles # Felles
+    c99e203e-9aa3-47ec-ba1c-e189dc6aa9be: Brødtekst # Brødtekst
+    cdae5da6-eb49-4503-a8e3-3f29862a608c: Media # Media
+    cecc58c9-98f9-4509-b2f0-6cd51db5cb7e: Hovedbilde # Hovedbilde
+    d7f1db2e-39b6-4094-8f31-e08db7f6aa84: Globaler # Globaler
+    d15b34a0-586b-4378-81a4-d177b2c4f79b: Lab # Lab
+    f23fb6e2-37bb-494d-a6ed-201392eee988: Oppsummering # Oppsummering
+    f60ab164-fd6b-4527-8b32-09d4ccf420ce: Inspirasjon # Inspirasjon
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+system:
+  edition: solo
+  live: true
+  name: Lab
+  retryDuration: null
+  schemaVersion: 3.7.8
+  timeZone: Europe/Oslo
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

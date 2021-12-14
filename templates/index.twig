@@ -1,0 +1,23 @@
+{% extends "_layout" %}
+{% set elements = craft.entries().section('menu').all() %}
+
+{% block content %}
+<main>
+    <ul class="front-nav">
+        {% for element in elements %}
+        <li>
+            <div class="front-nav__element {{ element.url_slug }}">
+                <a href="{{ siteUrl ~ element.url_slug }}">
+                    <div class="front-nav__img">
+                        {{ element.svg|raw }}
+                    </div>
+                    <div class="front-nav__link">
+                        {{ element.title }}
+                    </div>
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

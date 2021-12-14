@@ -1,0 +1,49 @@
+fieldLayouts:
+  43e102fd-a23e-484f-90dc-9513b017d536:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: a94191bb-057f-466a-823c-c121390522ed # Alt-tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Innhold
+        sortOrder: 1
+handle: media
+hasUrls: true
+name: Media
+settings:
+  path: '@webroot/assets/media'
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: null
+type: craft\volumes\Local
+url: '@web/assets/media'

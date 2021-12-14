@@ -1,0 +1,19 @@
+columnSuffix: oivqxvzh
+contentColumnType: string(280)
+fieldGroup: bade9013-b550-4c8e-b854-090d585d62ad # Felles
+handle: excerpt
+instructions: 'Maks ti ord om eksempelet.'
+name: Oppsummering
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 70
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

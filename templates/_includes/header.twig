@@ -1,0 +1,15 @@
+{% set elements = craft.entries().section('menu').all() %}
+{% set section = craft.app.request.getSegment(1) %}
+
+    <header>
+        <h1><a href="{{ siteUrl }}">lab</a></h1>
+        <nav class="top-nav" role="navigation">
+            <ul>
+                {% for element in elements %}
+                <li>
+                    <a {{ section == element.url_slug ? "class='active'" }} href="{{ siteUrl ~ element.url_slug }}">{{ element.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>

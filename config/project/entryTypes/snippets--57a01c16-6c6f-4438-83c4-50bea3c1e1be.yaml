@@ -1,0 +1,74 @@
+fieldLayouts:
+  cedd15a8-cb8b-456b-bfa5-23c52abdc3c2:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: f23fb6e2-37bb-494d-a6ed-201392eee988 # Oppsummering
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 6ad60569-f3d5-492f-9a84-621ba4029f01 # Slik gjør du
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a6a298dc-ff02-47c4-b8e6-9c7d3cbe4590 # Kode
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a11fd13b-0ecf-4500-b3ee-03e790c72ef1 # Media
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Innhold
+        sortOrder: 1
+handle: snippets
+hasTitleField: true
+name: Kodesnutter
+section: 915c2d57-d23f-4e55-ab1f-1398020167fc # Kodesnutter
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
