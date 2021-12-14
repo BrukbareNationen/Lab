@@ -29,25 +29,27 @@ window.onload = function() {
     {% set links = entry.links.all() %}
     {% if links|length %}
     <div class="entry__meta">
-        {% for link in links %}
-        <div class="entry__link">
-            <a href="{{ link.link_url }}">{{ link.link_text }}</a>
+        <div class="entry__links">
+            {% for link in links %}
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAsElEQVRIie2SzQ3CMAxGH7AEdCVaMQFrkAFQJZYCOkCnIb1wKgcMWJZT/noAKU+yIn1O7C9xIJP5O1ZAA3RAb8Ji8x1wBKpU8Z1z6J0GOmrPeQ+cgQ1QDF/UpQCC1OiBUicbEcMHhS1Bah20GEVcmM1Dz5B6vrloJ4CpSU6+tQ/MlLl7g1bWtdPwldDcarRarHgMOTDOkJd2Q81433SbclFynX50Dj1rEIG95zyT+XEuFRpXEhVovf0AAAAASUVORK5CYII="/> <a href="{{ link.link_url }}">{{ link.link_text }}</a>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
     {% endif %}
     <div>
         <div class="entry__body">
+            {% if entry.body_text %}
             <div>
                 {{ entry.body_text }}
             </div>
-            <div>
+            {% endif %}
             {% if entry.feature_image|length %}
+            <div class="entry__images">
                 {% for image in entry.feature_image.all() %}
                 <img src="{{ image.getUrl( imageAttr ) }}" alt="{{ image.alt }}">
                 {% endfor %}
-            {% endif %}
             </div>
+            {% endif %}
         </div>
     </div>
 

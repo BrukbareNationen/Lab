@@ -1,0 +1,40 @@
+{% extends "_layout" %}
+
+{% set imageAttr = {
+  mode: 'crop',
+  width: 400,
+  quality: 90
+} %}
+
+{% js %}
+window.onload = function() {
+    let a = Array.apply(null, document.querySelectorAll(".entry > *"));
+    a.forEach((el, i) => {
+        let d = (i * 0.1);
+        el.style.animationDelay = d + "s";
+        el.classList.add("in");
+    })  
+}
+{% endjs %}
+
+{% block content %}
+<main class="entry entry--tricks">
+
+    <div class="entry__meta">
+        <a href="javascript:history.back();">&larr; Tilbake</a>
+    </div>
+    <h2>{{ entry.title }}</h2>
+    <div class="entry__excerpt">{{ entry.excerpt }}</div>
+
+    <div>
+        <div class="entry__body">
+            {% if entry.body_text %}
+            <div>
+                {{ entry.body_text }}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+</main>
+{% endblock %}

@@ -2,7 +2,7 @@ columnSuffix: oivqxvzh
 contentColumnType: string(280)
 fieldGroup: bade9013-b550-4c8e-b854-090d585d62ad # Felles
 handle: excerpt
-instructions: 'Maks ti ord om eksempelet.'
+instructions: 'Oppsummering av artikkel på maks 70 tegn.'
 name: Oppsummering
 searchable: false
 settings:

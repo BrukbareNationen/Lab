@@ -2,8 +2,8 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: bade9013-b550-4c8e-b854-090d585d62ad # Felles
 handle: feature_image
-instructions: ''
-name: Hovedbilde
+instructions: 'Første bilde fungerer som puff.'
+name: Hovedbilder
 searchable: false
 settings:
   allowSelfRelations: false

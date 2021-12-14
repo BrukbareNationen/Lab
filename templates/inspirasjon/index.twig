@@ -7,17 +7,17 @@ window.onload = function() {
     let a = Array.apply(null, document.querySelectorAll(".loop__element"));
     a.forEach((el, i) => {
         let d = (i * 0.1);
-        el.style.animation = "scale-in-center 0.5s " + d + "s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
-        el.style.display = "block";
+        el.style.animationDelay = d + "s";
+        el.classList.add("in");
     })  
 }
 {% endjs %}
 
 {% block content %}
 <main class="inspo">
-    <div class="inspo-sidebar">Filter</div>
+    <aside>Filter</aside>
     <div class="loop loop--inspo">
-        {% include "inspirasjon/_loop" with { posts: posts } only %}
+        {% include "_includes/_loop" with { posts: posts } only %}
     </div>
 </main>
 {% endblock %}
