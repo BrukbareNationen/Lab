@@ -1,6 +1,6 @@
 <?php
 /**
- * Craft web bootstrap file                     Tester for commit
+ * Craft web bootstrap file 
  */
 
 // Define path constants
