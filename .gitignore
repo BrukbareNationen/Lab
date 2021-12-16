@@ -1,4 +1,5 @@
 /.env
 /.idea
+/web/assets/media
 /vendor
 .DS_Store
