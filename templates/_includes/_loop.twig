@@ -1,7 +1,7 @@
 {% for post in posts %}
 <div class="loop__element">
     <a href="{{ post.url }}">
-        {% if post.feature_image %}
+        {% if post.feature_image|length %}
         {% set image = post.feature_image.one() %}
         <div class="loop__img">
             <img src="{{ image.getUrl({ width: 300, height: 200 }) }}"></img>
