@@ -4,7 +4,7 @@ handle: tricks
 name: 'Tips og triks'
 propagationMethod: all
 siteSettings:
-  ab44a115-1c86-422c-aa37-88117c577abc: # Lab
+  ab44a115-1c86-422c-aa37-88117c577abc: # lab
     enabledByDefault: true
     hasUrls: true
     template: tips-og-triks/_entry
