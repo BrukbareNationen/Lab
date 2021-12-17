@@ -1,4 +1,4 @@
-dateModified: 1639731403
+dateModified: 1639748618
 email:
   fromEmail: jarand.ullestad@nationen.no
   fromName: Lab
@@ -32,7 +32,6 @@ meta:
     c99e203e-9aa3-47ec-ba1c-e189dc6aa9be: Brødtekst # Brødtekst
     cdae5da6-eb49-4503-a8e3-3f29862a608c: Media # Media
     cecc58c9-98f9-4509-b2f0-6cd51db5cb7e: Hovedbilder # Hovedbilder
-    d7f1db2e-39b6-4094-8f31-e08db7f6aa84: Globaler # Globaler
     d15b34a0-586b-4378-81a4-d177b2c4f79b: Lab # Lab
     f23fb6e2-37bb-494d-a6ed-201392eee988: Oppsummering # Oppsummering
     f60ab164-fd6b-4527-8b32-09d4ccf420ce: Inspirasjon # Inspirasjon
@@ -41,6 +40,51 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
+    settings:
+      description: ''
+      facebookAppId: ''
+      metaTemplate: ''
+      removeAlternateUrls: ''
+      robots:
+        - noindex
+        - ''
+        - ''
+        - ''
+        - ''
+        - noimageindex
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      sitemapLimit: '1000'
+      sitemapName: sitemap
+      socialImage: ''
+      title:
+        -
+          __assoc__:
+            -
+              - key
+              - '1'
+            -
+              - locked
+              - '0'
+            -
+              - template
+              - '{title}'
+        -
+          __assoc__:
+            -
+              - key
+              - '2'
+            -
+              - locked
+              - '1'
+            -
+              - template
+              - ' - {{ siteName }}'
+      titleSuffix: null
+      twitterHandle: ''
 system:
   edition: solo
   live: true
