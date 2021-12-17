@@ -233,6 +233,9 @@ aside {
 .entry p {
     margin-bottom: 10px;
 }
+.entry p, .entry li {
+    font-size: 17px;
+}
 .entry ol {
     margin-left: 23px;
 }
