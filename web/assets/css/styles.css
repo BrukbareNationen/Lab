@@ -4,14 +4,13 @@
     padding: 0;
 }
 body {
-    --font: "Inconsolata", monospace; 
     --primary: #333;
     --green: #287d7d;
     --pink: #ec9e87;
     --yellow: #f5e495;
 
     padding: 0 1rem;
-    font-family: var(--font);
+    font-family: "Inconsolata", monospace; 
     color: var(--primary);
     font-weight: 500;
     min-height: 100vh;
@@ -46,7 +45,6 @@ ul {
 }
 h2 {
     font-size: 56px;
-    font-weight: 600;
     margin-bottom: 2rem;
 }
 h3 {
@@ -208,9 +206,10 @@ aside {
 .entry a:hover {
     color: var(--active);
 }
-.entry [class*="excerpt"] {
-    font-size: 20px;
+.entry__excerpt {
+    font-size: 22px;
     margin-bottom: 2rem;
+    font-family: Karla;
 }
 .entry__meta {
     margin: 1rem 0;
@@ -222,20 +221,26 @@ aside {
 .entry__body {
     margin-top: 3rem;
 }
-.entry--inspo .entry__body {
-    display: grid;
-    justify-content: left;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 2rem;
-}
 .entry__images img {
     max-width: 100%;
+}
+.entry__block {
+    margin: 2rem 0;
+}
+.entry__block--media {
+    margin: 3rem 0;
+}
+.entry__block img {
+    max-width: 100%;
+    height: auto;
 }
 .entry p {
     margin-bottom: 10px;
 }
 .entry p, .entry li {
     font-size: 17px;
+    font-family: Karla;
+    color: black;
 }
 .entry ol {
     margin-left: 26px;
@@ -261,7 +266,6 @@ aside {
     margin-bottom: 8px;
 }
 .entry pre {
-    margin-top: 3rem;
     border-radius: 5px;
     border: 1px solid lightgray;
 }

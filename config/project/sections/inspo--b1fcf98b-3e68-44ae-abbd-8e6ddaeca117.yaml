@@ -7,6 +7,6 @@ siteSettings:
   ab44a115-1c86-422c-aa37-88117c577abc: # Lab
     enabledByDefault: true
     hasUrls: true
-    template: inspirasjon/_entry
+    template: _includes/_entry
     uriFormat: 'inspirasjon/{slug}'
 type: channel

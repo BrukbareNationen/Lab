@@ -36,7 +36,25 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: cecc58c9-98f9-4509-b2f0-6cd51db5cb7e # Hovedbilder
+            fieldUid: cecc58c9-98f9-4509-b2f0-6cd51db5cb7e # Hovedbilde
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2b9885e7-4026-45e0-9b91-ab23db9ceac7 # Lenker
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b073d6fe-271b-475a-8d3a-2501ad4ab7ed # Blokker
             instructions: null
             label: null
             required: false

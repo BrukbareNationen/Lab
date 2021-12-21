@@ -54,7 +54,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: cecc58c9-98f9-4509-b2f0-6cd51db5cb7e # Hovedbilder
+            fieldUid: cecc58c9-98f9-4509-b2f0-6cd51db5cb7e # Hovedbilde
             instructions: null
             label: null
             required: false

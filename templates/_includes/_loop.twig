@@ -4,7 +4,7 @@
         {% if post.feature_image|length %}
         {% set image = post.feature_image.one() %}
         <div class="loop__img">
-            <img src="{{ image.getUrl({ width: 300, height: 200 }) }}"></img>
+            <img src="{{ image.getUrl('loop') }}" alt="{{ image.alt }}">
         </div>
         {% endif %}
         <div class="loop__text">
