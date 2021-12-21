@@ -32,7 +32,7 @@ footer {
 
 /* Global */
 p, li {
-    line-height: 1.35;
+    line-height: 1.4;
 }
 a {
     color: var(--primary);
