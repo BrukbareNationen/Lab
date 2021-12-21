@@ -63,7 +63,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: c99e203e-9aa3-47ec-ba1c-e189dc6aa9be # Brødtekst
+            fieldUid: c99e203e-9aa3-47ec-ba1c-e189dc6aa9be
             instructions: null
             label: null
             required: false
