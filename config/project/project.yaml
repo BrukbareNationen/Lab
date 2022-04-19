@@ -1,4 +1,4 @@
-dateModified: 1640089976
+dateModified: 1650371865
 email:
   fromEmail: jarand.ullestad@nationen.no
   fromName: Lab
@@ -22,6 +22,7 @@ meta:
     2805e4bb-e9a3-40fa-825b-099323c42286: Entry # Entry
     3490f199-b868-44ac-b799-f151a928a42d: 'Tips og triks' # Tips og triks
     08715e09-2b04-4737-8933-c71821979f91: SVG # SVG
+    699073cc-78ba-42c6-87f4-77b9873a662d: 'Public Schema' # Public Schema
     a1e2c619-c7bb-4e93-a8ad-706d14b6a2ea: Meny-felter # Meny-felter
     a9196df9-350e-4141-9724-eabb9295bb67: Lenke # Lenke
     a94191bb-057f-466a-823c-c121390522ed: Alt-tekst # Alt-tekst
@@ -90,11 +91,11 @@ plugins:
       titleSuffix: null
       twitterHandle: ''
 system:
-  edition: solo
+  edition: pro
   live: true
   name: Lab
   retryDuration: null
-  schemaVersion: 3.7.8
+  schemaVersion: 3.7.33
   timeZone: Europe/Oslo
 users:
   allowPublicRegistration: false
