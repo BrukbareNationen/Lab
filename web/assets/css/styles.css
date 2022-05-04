@@ -119,6 +119,14 @@ h1 a {
 .front-nav__img svg {
     height: 100px;
 }
+.front-nav #gears #bigger {
+    transform-origin: 42px 42.2px;
+    transition: .3s;
+}
+.front-nav #gears #smaller {
+    transform-origin: 109.5px 55px;
+    transition: .3s;
+}
 .front-nav li:hover #bulb #bulb-inner {
     fill: var(--yellow);
 }
@@ -127,6 +135,12 @@ h1 a {
 }
 .front-nav li:hover #faq #question {
     opacity: 0;
+}
+.front-nav li:hover #gears #bigger {
+    transform: rotate(22.5deg);
+}
+.front-nav li:hover #gears #smaller {
+    transform: rotate(-40deg);
 }
 .front-nav__link {
     background: white;
