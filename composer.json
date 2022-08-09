@@ -18,7 +18,11 @@
     "optimize-autoloader": true,
     "platform": {
       "php": "7.2.5"
-    }
+    },
+    "allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+   }
   },
   "scripts": {
     "post-root-package-install": [
