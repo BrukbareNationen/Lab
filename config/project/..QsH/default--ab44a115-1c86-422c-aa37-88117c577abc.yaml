@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: nb
+name: Lab
+primary: true
+siteGroup: d15b34a0-586b-4378-81a4-d177b2c4f79b # Lab
+sortOrder: 1

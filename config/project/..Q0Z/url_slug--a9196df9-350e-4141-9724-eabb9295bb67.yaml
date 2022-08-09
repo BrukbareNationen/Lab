@@ -1,0 +1,19 @@
+columnSuffix: seuncshx
+contentColumnType: text
+fieldGroup: a1e2c619-c7bb-4e93-a8ad-706d14b6a2ea # Meny-felter
+handle: url_slug
+instructions: ''
+name: Lenke
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'F.eks. "inspirasjon" eller "inspirasjon/artikkel-1"'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

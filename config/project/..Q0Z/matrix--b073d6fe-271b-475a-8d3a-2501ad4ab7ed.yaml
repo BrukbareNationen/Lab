@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: bade9013-b550-4c8e-b854-090d585d62ad # Felles
+handle: matrix
+instructions: 'Velg type innholdsblokk.'
+name: Blokker
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_matrix}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

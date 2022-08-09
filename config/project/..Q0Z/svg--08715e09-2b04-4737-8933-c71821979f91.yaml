@@ -1,0 +1,19 @@
+columnSuffix: crubbqdx
+contentColumnType: text
+fieldGroup: a1e2c619-c7bb-4e93-a8ad-706d14b6a2ea # Meny-felter
+handle: svg
+instructions: 'Legg inn SVG-element (husk å legge inn som HTML). Denne vil overstyre et eventuelt bilde.'
+name: SVG
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '10'
+  multiline: '1'
+  placeholder: null
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

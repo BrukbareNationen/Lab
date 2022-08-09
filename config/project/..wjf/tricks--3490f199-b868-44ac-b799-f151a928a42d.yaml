@@ -1,5 +1,5 @@
 fieldLayouts:
-  cedd15a8-cb8b-456b-bfa5-23c52abdc3c2:
+  87768037-42e6-4916-86c2-3c343db0eff9:
     tabs:
       -
         elements:
@@ -62,12 +62,21 @@ fieldLayouts:
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
+          -
+            fieldUid: c99e203e-9aa3-47ec-ba1c-e189dc6aa9be
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Innhold
         sortOrder: 1
-handle: snippets
+handle: tricks
 hasTitleField: true
-name: Kodesnutter
-section: 915c2d57-d23f-4e55-ab1f-1398020167fc # Kodesnutter
+name: 'Tips og triks'
+section: 60e9152a-ba6b-452c-bcc6-428892207bfa # Tips og triks
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

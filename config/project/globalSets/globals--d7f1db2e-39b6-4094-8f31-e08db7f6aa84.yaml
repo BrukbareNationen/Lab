@@ -1,0 +1,19 @@
+fieldLayouts:
+  db0109ee-3443-406d-8217-c22e55e77f94:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7c52f0e9-6e2e-4187-b07c-a85987a0ae8a # Sidebeskrivelse
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: SEO
+        sortOrder: 1
+handle: globals
+name: Globaler
+sortOrder: 1
