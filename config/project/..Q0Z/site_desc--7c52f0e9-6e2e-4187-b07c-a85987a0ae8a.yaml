@@ -1,0 +1,19 @@
+columnSuffix: xcizlqvg
+contentColumnType: string(600)
+fieldGroup: b09e2feb-98df-440f-8a53-ad2938ecfbe9 # Globaler-felter
+handle: site_desc
+instructions: ''
+name: Sidebeskrivelse
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 150
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

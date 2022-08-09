@@ -1,0 +1,41 @@
+field: b073d6fe-271b-475a-8d3a-2501ad4ab7ed # Blokker
+fieldLayouts:
+  8e197ff7-8b61-4217-9940-796567947d60:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 826d49de-b5df-468f-b144-ffdb8cbfd516 # Kode
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  826d49de-b5df-468f-b144-ffdb8cbfd516: # Kode
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: code
+    instructions: ''
+    name: Kode
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: text
+      initialRows: '4'
+      multiline: '1'
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: code
+name: Kode
+sortOrder: 3

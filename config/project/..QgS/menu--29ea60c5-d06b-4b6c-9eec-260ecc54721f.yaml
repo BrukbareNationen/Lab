@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: menu
+name: Meny
+propagationMethod: all
+siteSettings:
+  ab44a115-1c86-422c-aa37-88117c577abc: # Lab
+    enabledByDefault: true
+    hasUrls: true
+    template: meny/_entry
+    uriFormat: 'meny/{slug}'
+structure:
+  maxLevels: null
+  uid: 67d85c72-718a-4af9-bf00-606fb70fa292
+type: structure

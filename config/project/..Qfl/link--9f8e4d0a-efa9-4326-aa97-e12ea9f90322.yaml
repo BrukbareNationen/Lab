@@ -1,0 +1,66 @@
+field: 2b9885e7-4026-45e0-9b91-ab23db9ceac7 # Lenker
+fieldLayouts:
+  10565562-f2fb-4e96-9d38-6d9431ec5c8e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 34ba5c58-1f33-4d1d-8df8-73cca7ff1c66 # Lenketekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 459d3b34-d55f-4c02-bf87-b63eabc70ffd # Lenkeadresse
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  34ba5c58-1f33-4d1d-8df8-73cca7ff1c66: # Lenketekst
+    columnSuffix: extngwhf
+    contentColumnType: text
+    fieldGroup: null
+    handle: link_text
+    instructions: ''
+    name: Lenketekst
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Snill lenke (nationen.no/lenke)'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  459d3b34-d55f-4c02-bf87-b63eabc70ffd: # Lenkeadresse
+    columnSuffix: louexhmv
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: link_url
+    instructions: ''
+    name: Lenkeadresse
+    searchable: false
+    settings:
+      maxLength: '255'
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+handle: link
+name: Lenke
+sortOrder: 1
