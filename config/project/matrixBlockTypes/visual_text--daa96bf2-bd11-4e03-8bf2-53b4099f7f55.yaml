@@ -1,0 +1,49 @@
+field: 7e98ec3a-8e3d-4d66-a22b-335820e54f2f # Innholdsblokker
+fieldLayouts:
+  983739dc-602f-4ceb-a3cb-a5584af4b318:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 74507bd8-c684-4f16-ae49-b970ae22b66b # Tekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  74507bd8-c684-4f16-ae49-b970ae22b66b: # Tekst
+    columnSuffix: skjxucuf
+    contentColumnType: text
+    fieldGroup: null
+    handle: text_content
+    instructions: ''
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: ''
+      redactorConfig: Simple.json
+      removeEmptyTags: ''
+      removeInlineStyles: ''
+      removeNbsp: ''
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: visual_text
+name: 'Historie – tekst'
+sortOrder: 5

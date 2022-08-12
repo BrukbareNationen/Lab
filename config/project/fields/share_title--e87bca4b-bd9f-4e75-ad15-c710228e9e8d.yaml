@@ -1,0 +1,19 @@
+columnSuffix: zwhzinar
+contentColumnType: string(400)
+fieldGroup: e6d5362a-65e2-4487-9c94-4c3b8c8e48bf # Lekeplass-felter
+handle: share_title
+instructions: ''
+name: Deletittel
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 100
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Om feltet ikke er fylt ut brukes artikkelens tittel'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

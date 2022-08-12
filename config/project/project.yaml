@@ -1,28 +1,44 @@
-dateModified: 1660040825
+dateModified: 1660291561
 email:
   fromEmail: jarand.ullestad@nationen.no
   fromName: Lab
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    0dfffdde-9452-4aca-8b6a-736f81eb2cd1: Tekst # Tekst
+    1e6f2e65-5f9a-4a4c-bc9f-f9891c3c6fa0: Media # Media
     2b9885e7-4026-45e0-9b91-ab23db9ceac7: Lenker # Lenker
+    2c1768f4-e7f5-4a6c-a048-7f6ee5368281: Størrelse # Størrelse
+    3c893587-1f40-48ba-8f8f-0576198287d1: HTML # HTML
     04e8fcb2-3195-4e04-9008-e4a636779e66: Loop # Loop
+    6d725075-1ca5-4984-8f61-18caa44cb4bd: 'Historie – bilde/video' # Historie – bilde/video
     7c52f0e9-6e2e-4187-b07c-a85987a0ae8a: Sidebeskrivelse # Sidebeskrivelse
+    7cbc85e8-6278-4f9c-b21b-857b02f4d89b: Størrelse # Størrelse
+    7e98ec3a-8e3d-4d66-a22b-335820e54f2f: Innholdsblokker # Innholdsblokker
     9f8e4d0a-efa9-4326-aa97-e12ea9f90322: Lenke # Lenke
     12c43602-5522-4612-8789-89627a2bcb0f: Meny # Meny
     29ea60c5-d06b-4b6c-9eec-260ecc54721f: Meny # Meny
     34ba5c58-1f33-4d1d-8df8-73cca7ff1c66: Lenketekst # Lenketekst
     57a01c16-6c6f-4438-83c4-50bea3c1e1be: Kodesnutter # Kodesnutter
     60e9152a-ba6b-452c-bcc6-428892207bfa: 'Tips og triks' # Tips og triks
+    88d6389f-d0e5-49a1-a74c-7ce9fbbe0176: Alt-tekst # Alt-tekst
     128afd8b-a1fe-4bc8-a913-2b3c4ecc45f3: Tekst # Tekst
     459d3b34-d55f-4c02-bf87-b63eabc70ffd: Lenkeadresse # Lenkeadresse
     0469b546-ffca-4bf3-a3b4-3b4386239862: Kode # Kode
+    637cb46c-92e4-4f26-b6c8-b493054c8408: Ingress # Ingress
     826d49de-b5df-468f-b144-ffdb8cbfd516: Kode # Kode
+    855fa310-69e8-4a3e-89fa-f0ba530bdf2d: Alt-tekst # Alt-tekst
+    891b8707-a9cc-464a-9f32-dc1acec4f464: Bildetekst # Bildetekst
     915c2d57-d23f-4e55-ab1f-1398020167fc: Kodesnutter # Kodesnutter
     2805e4bb-e9a3-40fa-825b-099323c42286: Entry # Entry
     3490f199-b868-44ac-b799-f151a928a42d: 'Tips og triks' # Tips og triks
+    4878d9b5-d160-4980-974d-473bfd77e858: 'Bilde (UUID)' # Bilde (UUID)
+    6885bacc-1fed-47b4-8de0-1ddf3b587104: Brødtekst # Brødtekst
     08715e09-2b04-4737-8933-c71821979f91: SVG # SVG
+    74507bd8-c684-4f16-ae49-b970ae22b66b: Tekst # Tekst
     699073cc-78ba-42c6-87f4-77b9873a662d: 'Public Schema' # Public Schema
+    3506441d-d861-4c0e-b35b-ab851b0668a2: Lekeplass # Lekeplass
+    38715568-f7f3-46bb-b0cf-be4c443162d6: Alt-tekst # Alt-tekst
     a1e2c619-c7bb-4e93-a8ad-706d14b6a2ea: Meny-felter # Meny-felter
     a9196df9-350e-4141-9724-eabb9295bb67: Lenke # Lenke
     a94191bb-057f-466a-823c-c121390522ed: Alt-tekst # Alt-tekst
@@ -32,64 +48,29 @@ meta:
     b1fcf98b-3e68-44ae-abbd-8e6ddaeca117: Inspirasjon # Inspirasjon
     bade9013-b550-4c8e-b854-090d585d62ad: Felles # Felles
     bb758d4c-742d-47fd-ad1a-174fa0b98f98: Media # Media
+    c0a032da-da26-4737-86a9-4e72d01060d7: Lekeplass # Lekeplass
     c3af0b27-ff25-4c64-a9cb-f6aad24d5550: Media # Media
+    c45860de-5f1d-4d0f-b731-5c1528cd418f: Deletekst # Deletekst
+    cb31edef-84c1-4c85-b289-2fb84e6646ec: Delebilde # Delebilde
     cdae5da6-eb49-4503-a8e3-3f29862a608c: Media # Media
     cecc58c9-98f9-4509-b2f0-6cd51db5cb7e: Hovedbilde # Hovedbilde
     d15b34a0-586b-4378-81a4-d177b2c4f79b: Lab # Lab
     d9356b4f-e996-4e7d-9bc5-ed6374f4c580: Tekst # Tekst
+    daa96bf2-bd11-4e03-8bf2-53b4099f7f55: 'Historie – tekst' # Historie – tekst
+    e047e5e6-5c22-427b-98d9-c46362778e62: Bildetekst # Bildetekst
+    e4a678d6-f77c-4f7a-9595-6ff1431114a6: Media # Media
+    e6d5362a-65e2-4487-9c94-4c3b8c8e48bf: Lekeplass-felter # Lekeplass-felter
+    e87bca4b-bd9f-4e75-ad15-c710228e9e8d: Deletittel # Deletittel
+    ebbc7b86-4a69-44bd-b81d-a1e10ea6c419: Kode # Kode
+    ee030aea-0c21-445c-9d2f-f4311f73f422: 'Bilde/video (enkel)' # Bilde/video (enkel)
     f23fb6e2-37bb-494d-a6ed-201392eee988: Oppsummering # Oppsummering
     f60ab164-fd6b-4527-8b32-09d4ccf420ce: Inspirasjon # Inspirasjon
+    f881c445-a3d5-4ef6-bb44-cc658ca6cd1a: UUID # UUID
 plugins:
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
-  seo:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.2.0
-    settings:
-      description: 'Nationens digitale lekegrind.'
-      facebookAppId: ''
-      metaTemplate: ''
-      removeAlternateUrls: ''
-      robots:
-        - noindex
-        - ''
-        - ''
-        - ''
-        - ''
-        - noimageindex
-      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
-      sitemapLimit: '1000'
-      sitemapName: sitemap
-      socialImage:
-        - '45'
-      title:
-        -
-          __assoc__:
-            -
-              - key
-              - '1'
-            -
-              - locked
-              - '0'
-            -
-              - template
-              - '{title}'
-        -
-          __assoc__:
-            -
-              - key
-              - '2'
-            -
-              - locked
-              - '1'
-            -
-              - template
-              - ' - {{ siteName }}'
-      titleSuffix: null
-      twitterHandle: ''
 system:
   edition: pro
   live: true

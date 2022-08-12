@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ entry.title }}</title>
+    <meta property="og:title" content="{{ entry.title }}">
+    <meta name="description" content="{{ entry.share_text != false ? entry.share_text : entry.playground_excerpt != false ? entry.playground_excerpt }}">
+    <meta property="og:description" content="Myken kunne blitt en ren sommerøy, hadde ikke Roar Larsen og familien blitt værfaste for 13 år siden.">
+    <meta property="og:url" content="SETT INN">
+    <meta property="og:type" content="article">
+    {% set fbimg = entry.share_image.one() %}
+    {% if fbimg %}<meta property="og:image" content="{{ fbimg.getUrl({ mode: 'crop', width: 1200, height: 629, quality: 75 }) }}">{% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Nationen_as">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ekstra.nationen.no/statisk/media/nationen-logo144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://ekstra.nationen.no/statisk/media/nationen-logo114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://ekstra.nationen.no/statisk/media/nationen-logo72.png">
+    <link rel="apple-touch-icon-precomposed" href="https://ekstra.nationen.no/statisk/media/nationen-logo57.png">
+    <link rel="shortcut icon" href="https://ekstra.nationen.no/statisk/media/nationen-logo32.png">
+    <link rel="stylesheet" href="https://ekstra.nationen.no/spesial/whiskyoya/assets/css/app.min.css">
+</head>
+
+<body>
+
+<h1>{{ entry.title }}</h1>
+<div class="excerpt">{{ entry.playground_excerpt }}</div>
+
+{% for block in entry.playground_matrix.all() %}
+
+{% if block.type == "text" %}
+<div class="col">
+    {{ block.text_content }}
+</div>
+{% endif %}
+
+{% if block.type == "media" %}
+{% set size = block.size %}
+{% set file = block.media.one() %}
+<div class="col{{ size != "standard" ? " col-#{size}" }}">
+    <figure>
+        {% if file.kind == "image" %}
+        <picture>
+            <img src="{{ file.getUrl({ mode: 'crop', width: 1200, height: 629, quality: 75 }) }}" alt="{{ file.alt }}" width="" height="" />
+        </picture>
+        {% elseif file.kind == "video" %}
+        <video>
+            <source src="{{ file.url }}" type="{{ file.mimeType }}" playsinline muted loop>
+        </video>
+        {% endif %}
+        {% if block.caption is not empty %}
+        <figcaption>{{ block.caption }}</figcaption>
+        {% endif %}
+    </figure>
+</div>
+{% endif %}
+
+{% if block.type == "html" %}
+    {{ block.code|raw }}
+{% endif %}
+
+{% if block.type == "visual_text" %}
+<div class="story__trigger">
+    <div>
+        {{ block.text_content }}
+    </div>
+</div>
+{% endif %}
+
+{% if block.type == "visual_media" %}
+{% set file = block.media.one() %}
+<div class="story__background">
+    {% if file.kind == "image" %}
+    <picture>
+        <source media="(max-aspect-ratio: 3/4) and (max-width: 600px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 65 }) }}">
+        <img src="{{ file.getUrl({ mode: 'crop', width: 1920, height: 1080, quality: 65 }) }}" alt="{{ file.alt }}" />
+    </picture>
+    {% elseif file.kind == "video" %}
+    <video>
+        <source src="{{ file.url }}" type="{{ file.mimeType }}" playsinline muted loop>
+    </video>
+    {% endif %}
+</div>
+{% endif %}
+
+{% endfor %}
+
+<footer>
+Footer innhold
+</footer>
+
+{% js %}
+
+/* Nat Story v3 */
+
+// Build
+let natStories = document.querySelectorAll(".story"), id = 1;
+natStories.forEach(s => {
+    s.dataset.story = id; id++;
+    let rect = s.getBoundingClientRect();
+    let storyContent = s.querySelectorAll(".story__background, .story__trigger"), i = 0;
+    let bg = s.querySelectorAll(".story__background");
+    storyContent.forEach(e => {
+        if (e.className == "story__background") { 
+            i++; e.dataset.storyId = i;
+            if (i == 1 && rect.y > 0) e.dataset.storyState = "active";
+            else if (i == bg.length && rect.y < 0) e.dataset.storyState = "active";
+        }
+        else if (e.classList.contains("story__trigger")) e.dataset.storyControl = i;
+    });
+});
+
+// Observe
+var elementObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        let t = entry.target;
+        if (entry.isIntersecting) {
+            let s = t.parentNode,
+                tId = parseInt(t.dataset.storyControl),
+                tBg = s.querySelector(".story__background[data-story-id='" + tId + "']"),
+                prevBg = s.querySelector(".story__background[data-story-id='" + (tId - 1) + "']"),
+                nextBg = s.querySelector(".story__background[data-story-id='" + (tId + 1) + "']"),
+                hasState = s.querySelectorAll('[data-story-state]');
+            hasState.forEach(e => { delete e.dataset.storyState; });
+            t.dataset.storyState = tBg.dataset.storyState = "active";
+            if (prevBg !== null) prevBg.dataset.storyState = "prev";
+            if (nextBg !== null) nextBg.dataset.storyState = "next";
+        }
+        else {
+            delete t.dataset.storyState;
+        }
+    });
+}, { 
+    threshold: 0.4
+});
+var storyElement = document.querySelectorAll('.story__trigger');
+storyElement.forEach((e) => {
+    elementObserver.observe(e);
+});
+/* End Nat Story */
+
+{% endjs %}
+
+</body>
+</html>

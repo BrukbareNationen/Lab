@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e6d5362a-65e2-4487-9c94-4c3b8c8e48bf # Lekeplass-felter
+handle: playground_matrix
+instructions: 'Legg inn innhold i blokker som kan flyttes rundt på, på samme måte som i Writer.'
+name: Innholdsblokker
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_playground_matrix}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

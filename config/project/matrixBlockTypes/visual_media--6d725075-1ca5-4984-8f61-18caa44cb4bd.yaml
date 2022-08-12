@@ -1,0 +1,56 @@
+field: 7e98ec3a-8e3d-4d66-a22b-335820e54f2f # Innholdsblokker
+fieldLayouts:
+  4e51b770-7e78-49ac-b0cc-ba0060de4717:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: e4a678d6-f77c-4f7a-9595-6ff1431114a6 # Media
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  e4a678d6-f77c-4f7a-9595-6ff1431114a6: # Media
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: media
+    instructions: ''
+    name: Media
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+        - video
+      defaultUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+      singleUploadLocationSubpath: 'playground/{owner.slug}'
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: visual_media
+name: 'Historie – bilde/video'
+sortOrder: 6

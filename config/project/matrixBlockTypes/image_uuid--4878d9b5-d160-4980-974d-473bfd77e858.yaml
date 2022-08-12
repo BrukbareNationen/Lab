@@ -1,0 +1,174 @@
+field: 7e98ec3a-8e3d-4d66-a22b-335820e54f2f # Innholdsblokker
+fieldLayouts:
+  f221a84f-37a3-4650-bb02-9322c2ee7c22:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f881c445-a3d5-4ef6-bb44-cc658ca6cd1a # UUID
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 855fa310-69e8-4a3e-89fa-f0ba530bdf2d # Alt-tekst
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 891b8707-a9cc-464a-9f32-dc1acec4f464 # Bildetekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2c1768f4-e7f5-4a6c-a048-7f6ee5368281 # Størrelse
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2c1768f4-e7f5-4a6c-a048-7f6ee5368281: # Størrelse
+    columnSuffix: osmqlfwk
+    contentColumnType: string
+    fieldGroup: null
+    handle: size
+    instructions: ''
+    name: Størrelse
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Liten
+            -
+              - value
+              - small
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Kolonne
+            -
+              - value
+              - standard
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Stor
+            -
+              - value
+              - large
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Fullbredde
+            -
+              - value
+              - full
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  855fa310-69e8-4a3e-89fa-f0ba530bdf2d: # Alt-tekst
+    columnSuffix: huycqbad
+    contentColumnType: string(600)
+    fieldGroup: null
+    handle: alt_text
+    instructions: ''
+    name: Alt-tekst
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 150
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Beskriv hva du ser i bildet.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  891b8707-a9cc-464a-9f32-dc1acec4f464: # Bildetekst
+    columnSuffix: owzxjsmv
+    contentColumnType: text
+    fieldGroup: null
+    handle: caption
+    instructions: ''
+    name: Bildetekst
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: ''
+      redactorConfig: Simple.json
+      removeEmptyTags: ''
+      removeInlineStyles: ''
+      removeNbsp: ''
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  f881c445-a3d5-4ef6-bb44-cc658ca6cd1a: # UUID
+    columnSuffix: zmodcusx
+    contentColumnType: string
+    fieldGroup: null
+    handle: uuid
+    instructions: ''
+    name: UUID
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 35
+      code: '1'
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: image_uuid
+name: 'Bilde (UUID)'
+sortOrder: 2

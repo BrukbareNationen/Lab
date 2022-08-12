@@ -1,0 +1,27 @@
+columnSuffix: hmsonvhr
+contentColumnType: text
+fieldGroup: e6d5362a-65e2-4487-9c94-4c3b8c8e48bf # Lekeplass-felter
+handle: playground_excerpt
+instructions: ''
+name: Ingress
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: ''
+  redactorConfig: Simple.json
+  removeEmptyTags: ''
+  removeInlineStyles: ''
+  removeNbsp: ''
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field
