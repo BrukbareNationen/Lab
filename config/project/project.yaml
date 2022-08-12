@@ -1,4 +1,4 @@
-dateModified: 1660291561
+dateModified: 1660299135
 email:
   fromEmail: jarand.ullestad@nationen.no
   fromName: Lab
@@ -14,7 +14,9 @@ meta:
     6d725075-1ca5-4984-8f61-18caa44cb4bd: 'Historie – bilde/video' # Historie – bilde/video
     7c52f0e9-6e2e-4187-b07c-a85987a0ae8a: Sidebeskrivelse # Sidebeskrivelse
     7cbc85e8-6278-4f9c-b21b-857b02f4d89b: Størrelse # Størrelse
+    7cc85b02-cb52-4fe7-bdba-b2323aaf31a7: Kodesnutter-felter # Kodesnutter-felter
     7e98ec3a-8e3d-4d66-a22b-335820e54f2f: Innholdsblokker # Innholdsblokker
+    8c14e8b7-f928-4d57-864e-96ca3f58ecfb: Inspirasjon-felter # Inspirasjon-felter
     9f8e4d0a-efa9-4326-aa97-e12ea9f90322: Lenke # Lenke
     12c43602-5522-4612-8789-89627a2bcb0f: Meny # Meny
     29ea60c5-d06b-4b6c-9eec-260ecc54721f: Meny # Meny
@@ -54,6 +56,7 @@ meta:
     cb31edef-84c1-4c85-b289-2fb84e6646ec: Delebilde # Delebilde
     cdae5da6-eb49-4503-a8e3-3f29862a608c: Media # Media
     cecc58c9-98f9-4509-b2f0-6cd51db5cb7e: Hovedbilde # Hovedbilde
+    d7f1db2e-39b6-4094-8f31-e08db7f6aa84: Globaler # Globaler
     d15b34a0-586b-4378-81a4-d177b2c4f79b: Lab # Lab
     d9356b4f-e996-4e7d-9bc5-ed6374f4c580: Tekst # Tekst
     daa96bf2-bd11-4e03-8bf2-53b4099f7f55: 'Historie – tekst' # Historie – tekst
@@ -61,6 +64,7 @@ meta:
     e4a678d6-f77c-4f7a-9595-6ff1431114a6: Media # Media
     e6d5362a-65e2-4487-9c94-4c3b8c8e48bf: Lekeplass-felter # Lekeplass-felter
     e87bca4b-bd9f-4e75-ad15-c710228e9e8d: Deletittel # Deletittel
+    e530a35c-13f0-4c67-b1dd-851c2391b99e: 'Public Schema' # Public Schema
     ebbc7b86-4a69-44bd-b81d-a1e10ea6c419: Kode # Kode
     ee030aea-0c21-445c-9d2f-f4311f73f422: 'Bilde/video (enkel)' # Bilde/video (enkel)
     f23fb6e2-37bb-494d-a6ed-201392eee988: Oppsummering # Oppsummering
