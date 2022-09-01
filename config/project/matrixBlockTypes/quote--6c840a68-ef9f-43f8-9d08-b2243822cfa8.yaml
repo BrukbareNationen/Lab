@@ -1,0 +1,113 @@
+field: 7e98ec3a-8e3d-4d66-a22b-335820e54f2f # Innholdsblokker
+fieldLayouts:
+  6e5275e7-0c31-4e41-8023-14fa19a93f93:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 68377008-0f60-4896-8928-29bb940d1eda # Sitat
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: bafe8cae-b801-4839-86d3-3efe8441aec6 # Navn
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8932a9cf-f26d-44f8-8378-3c5595027879 # Bilde
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  8932a9cf-f26d-44f8-8378-3c5595027879: # Bilde
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: quote_image
+    instructions: ''
+    name: Bilde
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+      singleUploadLocationSubpath: 'Lekeplass/{owner.slug}'
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  68377008-0f60-4896-8928-29bb940d1eda: # Sitat
+    columnSuffix: hpkpjfzr
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote_content
+    instructions: ''
+    name: Sitat
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bafe8cae-b801-4839-86d3-3efe8441aec6: # Navn
+    columnSuffix: mhsrdaev
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote_name
+    instructions: ''
+    name: Navn
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: quote
+name: Sitat
+sortOrder: 5

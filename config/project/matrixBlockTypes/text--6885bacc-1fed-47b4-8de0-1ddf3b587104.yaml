@@ -33,7 +33,7 @@ fields:
       manualConfig: ''
       purifierConfig: ''
       purifyHtml: ''
-      redactorConfig: Simple.json
+      redactorConfig: Custom.json
       removeEmptyTags: ''
       removeInlineStyles: ''
       removeNbsp: '1'

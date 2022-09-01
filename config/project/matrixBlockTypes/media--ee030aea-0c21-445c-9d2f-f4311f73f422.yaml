@@ -59,7 +59,7 @@ fields:
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
       singleUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
-      singleUploadLocationSubpath: ''
+      singleUploadLocationSubpath: 'Lekeplass/{owner.slug}'
       source: null
       sources: '*'
       targetSiteId: null

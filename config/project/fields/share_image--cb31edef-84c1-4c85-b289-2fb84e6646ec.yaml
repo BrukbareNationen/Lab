@@ -17,11 +17,11 @@ settings:
   previewMode: full
   restrictFiles: '1'
   selectionLabel: ''
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
-  singleUploadLocationSubpath: 'lekeplass/{slug}'
+  singleUploadLocationSubpath: 'Lekeplass/{slug}'
   source: null
   sources: '*'
   targetSiteId: null

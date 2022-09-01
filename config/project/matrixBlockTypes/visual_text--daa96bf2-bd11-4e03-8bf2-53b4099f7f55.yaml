@@ -46,4 +46,4 @@ fields:
     type: craft\redactor\Field
 handle: visual_text
 name: 'Historie – tekst'
-sortOrder: 5
+sortOrder: 7

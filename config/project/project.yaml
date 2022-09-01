@@ -1,4 +1,4 @@
-dateModified: 1660299135
+dateModified: 1662024395
 email:
   fromEmail: jarand.ullestad@nationen.no
   fromName: Lab
@@ -6,11 +6,13 @@ email:
 meta:
   __names__:
     0dfffdde-9452-4aca-8b6a-736f81eb2cd1: Tekst # Tekst
+    1b6ea25f-a4f9-4465-967d-63fee0d56689: Bildetekst # Bildetekst
     1e6f2e65-5f9a-4a4c-bc9f-f9891c3c6fa0: Media # Media
     2b9885e7-4026-45e0-9b91-ab23db9ceac7: Lenker # Lenker
     2c1768f4-e7f5-4a6c-a048-7f6ee5368281: Størrelse # Størrelse
     3c893587-1f40-48ba-8f8f-0576198287d1: HTML # HTML
     04e8fcb2-3195-4e04-9008-e4a636779e66: Loop # Loop
+    6c840a68-ef9f-43f8-9d08-b2243822cfa8: Sitat # Sitat
     6d725075-1ca5-4984-8f61-18caa44cb4bd: 'Historie – bilde/video' # Historie – bilde/video
     7c52f0e9-6e2e-4187-b07c-a85987a0ae8a: Sidebeskrivelse # Sidebeskrivelse
     7cbc85e8-6278-4f9c-b21b-857b02f4d89b: Størrelse # Størrelse
@@ -37,10 +39,12 @@ meta:
     4878d9b5-d160-4980-974d-473bfd77e858: 'Bilde (UUID)' # Bilde (UUID)
     6885bacc-1fed-47b4-8de0-1ddf3b587104: Brødtekst # Brødtekst
     08715e09-2b04-4737-8933-c71821979f91: SVG # SVG
+    8932a9cf-f26d-44f8-8378-3c5595027879: Bilde # Bilde
     74507bd8-c684-4f16-ae49-b970ae22b66b: Tekst # Tekst
     699073cc-78ba-42c6-87f4-77b9873a662d: 'Public Schema' # Public Schema
     3506441d-d861-4c0e-b35b-ab851b0668a2: Lekeplass # Lekeplass
     38715568-f7f3-46bb-b0cf-be4c443162d6: Alt-tekst # Alt-tekst
+    68377008-0f60-4896-8928-29bb940d1eda: Sitat # Sitat
     a1e2c619-c7bb-4e93-a8ad-706d14b6a2ea: Meny-felter # Meny-felter
     a9196df9-350e-4141-9724-eabb9295bb67: Lenke # Lenke
     a94191bb-057f-466a-823c-c121390522ed: Alt-tekst # Alt-tekst
@@ -48,7 +52,9 @@ meta:
     b073d6fe-271b-475a-8d3a-2501ad4ab7ed: Blokker # Blokker
     b09e2feb-98df-440f-8a53-ad2938ecfbe9: Globaler-felter # Globaler-felter
     b1fcf98b-3e68-44ae-abbd-8e6ddaeca117: Inspirasjon # Inspirasjon
+    b5683f08-738a-4902-a9a9-31312e2042dd: 'Bilde (dobbel)' # Bilde (dobbel)
     bade9013-b550-4c8e-b854-090d585d62ad: Felles # Felles
+    bafe8cae-b801-4839-86d3-3efe8441aec6: Navn # Navn
     bb758d4c-742d-47fd-ad1a-174fa0b98f98: Media # Media
     c0a032da-da26-4737-86a9-4e72d01060d7: Lekeplass # Lekeplass
     c3af0b27-ff25-4c64-a9cb-f6aad24d5550: Media # Media
@@ -67,6 +73,7 @@ meta:
     e530a35c-13f0-4c67-b1dd-851c2391b99e: 'Public Schema' # Public Schema
     ebbc7b86-4a69-44bd-b81d-a1e10ea6c419: Kode # Kode
     ee030aea-0c21-445c-9d2f-f4311f73f422: 'Bilde/video (enkel)' # Bilde/video (enkel)
+    f3aa9675-93a2-42a3-ade9-ef0269d08b19: Bilder # Bilder
     f23fb6e2-37bb-494d-a6ed-201392eee988: Oppsummering # Oppsummering
     f60ab164-fd6b-4527-8b32-09d4ccf420ce: Inspirasjon # Inspirasjon
     f881c445-a3d5-4ef6-bb44-cc658ca6cd1a: UUID # UUID

@@ -1,3 +1,17 @@
+{% set sizes = {
+    'small': {
+        mode: 'crop', 
+        width: 480, 
+        height: 400, 
+        quality: 75
+    },
+    'large': {
+        mode: 'fit', 
+        width: 1600, 
+        quality: 75
+    }
+} %}
+
 <!DOCTYPE html>
 <html lang="nb-NO">
 
@@ -19,81 +33,138 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://ekstra.nationen.no/statisk/media/nationen-logo72.png">
     <link rel="apple-touch-icon-precomposed" href="https://ekstra.nationen.no/statisk/media/nationen-logo57.png">
     <link rel="shortcut icon" href="https://ekstra.nationen.no/statisk/media/nationen-logo32.png">
-    <link rel="stylesheet" href="https://ekstra.nationen.no/spesial/whiskyoya/assets/css/app.min.css">
+    <link rel="stylesheet" href="../assets/css/playground.css">
 </head>
 
 <body>
 
-<h1>{{ entry.title }}</h1>
-<div class="excerpt">{{ entry.playground_excerpt }}</div>
+<header>
+    <nav></nav>
+</header>
 
-{% for block in entry.playground_matrix.all() %}
+<article>
+    <header>
+        <h1>{{ entry.title }}</h1>
+        <div class="excerpt">{{ entry.playground_excerpt }}</div>
+    </header>
 
-{% if block.type == "text" %}
-<div class="col">
-    {{ block.text_content }}
-</div>
-{% endif %}
+    {% for block in entry.playground_matrix.all() %}
 
-{% if block.type == "media" %}
-{% set size = block.size %}
-{% set file = block.media.one() %}
-<div class="col{{ size != "standard" ? " col-#{size}" }}">
-    <figure>
+    {% if block.type == "text" %}
+    <div class="col">
+        {{ block.text_content }}
+    </div>
+    {% endif %}
+
+    {% if block.type == "media" %}
+    {% set size = block.size.value %}
+    {% set file = block.media.one() %}
+    <div class="col{{ size != "standard" ? " col--#{size}" }}">
+        <figure>
+            {% if file.kind == "image" %}
+            <picture>
+                <img src="{{ file.getUrl( sizes[size] ) }}" alt="{{ file.alt }}" />
+            </picture>
+            {% elseif file.kind == "video" %}
+            <video>
+                <source src="{{ file.url }}" type="{{ file.mimeType }}" playsinline muted loop>
+            </video>
+            {% endif %}
+            {% if block.caption is not empty %}
+            <figcaption>{{ block.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    </div>
+    {% endif %}
+
+    {% if block.type == "image_two" %}
+    {% set images = block.images.all() %}
+    <div class="col col--full">
+        <figure class="image-double">
+            {% for image in images %}
+            <picture>
+                <img src="{{ image.getUrl({ mode: 'fit', height: 600, quality: 75 }) }}" alt="{{ image.alt }}" />
+            </picture>
+            {% endfor %}
+            {% if block.caption is not empty %}
+            <figcaption>{{ block.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    </div>
+    {% endif %}
+
+    {% if block.type == "html" %}
+        {{ block.code|raw }}
+    {% endif %}
+
+    {% if block.type == "visual_text" %}
+    <div class="story__trigger">
+        <div>{{ block.text_content }}</div>
+    </div>
+    {% endif %}
+
+    {% if block.type == "visual_media" %}
+    {% set file = block.media.one() %}
+    {% set dir = file.width < file.height ? "portrait" : "landscape"  %}
+    <div class="story__background">
         {% if file.kind == "image" %}
         <picture>
-            <img src="{{ file.getUrl({ mode: 'crop', width: 1200, height: 629, quality: 75 }) }}" alt="{{ file.alt }}" width="" height="" />
+            {% if dir == "portrait" %}
+            <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 55 }) }}" >
+            <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 65 }) }}" >
+            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" />
+            {% else %}
+            <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 55 }) }}" >
+            <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
+            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 1920, quality: 65 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
+            {% endif %}
         </picture>
         {% elseif file.kind == "video" %}
         <video>
             <source src="{{ file.url }}" type="{{ file.mimeType }}" playsinline muted loop>
         </video>
         {% endif %}
-        {% if block.caption is not empty %}
-        <figcaption>{{ block.caption }}</figcaption>
-        {% endif %}
-    </figure>
-</div>
-{% endif %}
-
-{% if block.type == "html" %}
-    {{ block.code|raw }}
-{% endif %}
-
-{% if block.type == "visual_text" %}
-<div class="story__trigger">
-    <div>
-        {{ block.text_content }}
     </div>
-</div>
-{% endif %}
-
-{% if block.type == "visual_media" %}
-{% set file = block.media.one() %}
-<div class="story__background">
-    {% if file.kind == "image" %}
-    <picture>
-        <source media="(max-aspect-ratio: 3/4) and (max-width: 600px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 65 }) }}">
-        <img src="{{ file.getUrl({ mode: 'crop', width: 1920, height: 1080, quality: 65 }) }}" alt="{{ file.alt }}" />
-    </picture>
-    {% elseif file.kind == "video" %}
-    <video>
-        <source src="{{ file.url }}" type="{{ file.mimeType }}" playsinline muted loop>
-    </video>
     {% endif %}
-</div>
-{% endif %}
 
-{% endfor %}
+    {% endfor %}
+</article>
 
 <footer>
-Footer innhold
+    <div class="col col--large col--split">
+        <div class="footer__logo">                    
+            <a href="https://nationen.no" class="nodec">
+                <img src="./assets/images/nationen-full-hvit.svg" loading="lazy">
+            </a>
+        </div>
+        <div class="footer__meta">
+            <div>
+                Ansvarlig redaktør<br>
+                <a href="mailto:irene.halvorsen@nationen.no">Irene Halvorsen</a></div>
+            <div>
+                Nyhetsredaktør<br>
+                <a href="mailto:svein.hansli@nationen.no">Svein Ove Hansli</a>
+            </div>
+            <div>
+                <a href="https://www.tunmedia.no/kontakt">Kontakt redaksjonen</a>
+            </div>
+            <div>
+                Nationen arbeider etter <a href="http://presse.no/Etisk-regelverk/Vaer-Varsom-plakaten/">Vær varsom-plakatens regler</a> for god presseskikk.
+            </div>
+            <div>
+                <img style="margin-right: 1rem;" src="./assets/images/pfu-rund-hvit.png" loading="lazy">
+                <img src="./assets/images/nored-segl.svg" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <div class="col" style="text-align: center;">
+        <a href="#top">Rull opp til toppen</a>
+    </div>
 </footer>
 
 {% js %}
 
-/* Nat Story v3 */
-
+/* Story */
 // Build
 let natStories = document.querySelectorAll(".story"), id = 1;
 natStories.forEach(s => {
@@ -110,35 +181,34 @@ natStories.forEach(s => {
         else if (e.classList.contains("story__trigger")) e.dataset.storyControl = i;
     });
 });
-
 // Observe
 var elementObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        let t = entry.target;
+        let t = entry.target
         if (entry.isIntersecting) {
             let s = t.parentNode,
                 tId = parseInt(t.dataset.storyControl),
                 tBg = s.querySelector(".story__background[data-story-id='" + tId + "']"),
                 prevBg = s.querySelector(".story__background[data-story-id='" + (tId - 1) + "']"),
                 nextBg = s.querySelector(".story__background[data-story-id='" + (tId + 1) + "']"),
-                hasState = s.querySelectorAll('[data-story-state]');
-            hasState.forEach(e => { delete e.dataset.storyState; });
-            t.dataset.storyState = tBg.dataset.storyState = "active";
-            if (prevBg !== null) prevBg.dataset.storyState = "prev";
-            if (nextBg !== null) nextBg.dataset.storyState = "next";
+                hasState = s.querySelectorAll('[data-story-state]')
+            hasState.forEach(e => { delete e.dataset.storyState; })
+            t.dataset.storyState = tBg.dataset.storyState = "active"
+            if (prevBg !== null) prevBg.dataset.storyState = "prev"
+            if (nextBg !== null) nextBg.dataset.storyState = "next"
+            Typewriter.Init(t)
         }
         else {
-            delete t.dataset.storyState;
+            delete t.dataset.storyState
         }
-    });
+    })
 }, { 
     threshold: 0.4
 });
 var storyElement = document.querySelectorAll('.story__trigger');
 storyElement.forEach((e) => {
-    elementObserver.observe(e);
+    elementObserver.observe(e)
 });
-/* End Nat Story */
 
 {% endjs %}
 

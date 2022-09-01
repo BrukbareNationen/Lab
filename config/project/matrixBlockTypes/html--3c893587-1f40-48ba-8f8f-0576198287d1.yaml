@@ -38,4 +38,4 @@ fields:
     type: craft\fields\PlainText
 handle: html
 name: HTML
-sortOrder: 4
+sortOrder: 6
