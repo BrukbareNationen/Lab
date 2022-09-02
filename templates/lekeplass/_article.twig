@@ -1,6 +1,10 @@
+{% set breakpoints = {
+    mobile: 480,
+    col: 680
+} %}
 {% set widths = {
-    small: 480,
-    standard: 680,
+    small: breakpoints.mobile,
+    standard: breakpoints.col,
     large: 960,
     full: 1920
 } %}
@@ -83,7 +87,7 @@
     <div class="meta col">
         <div class="authors">
             <div>Tekst: <a href="mailto:fredrik.holtekjolen@nationen.no">Fredrik Holtekjølen</a></div>
-            <div>Tekst og foto: <a href="mailto:vilma.taubo@nationen.no">Vilma Taubo</a></div>
+            <div>Foto: <a href="mailto:vilma.taubo@nationen.no">Vilma Taubo</a></div>
             <div>Utvikling: <a href="mailto:jarand.ullestad@nationen.no">Jarand Ullestad</a></div>
         </div>
     </div>
@@ -99,10 +103,12 @@
     {% if block.type == "media" %}
     {% set size = block.size.value %}
     {% set file = block.media.one() %}
-    <div class="col{{ size != "standard" ? " col--#{size}" }}">
+    <div class="col{{ size != "standard" ? " col--#{size}" }} col--expand">
         <figure>
             {% if file.kind == "image" %}
             <picture>
+                <source media="(max-width: {{ breakpoints.mobile }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.mobile, quality: 55 }) }}" >
+                <source media="(max-width: {{ breakpoints.col }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.col, quality: 60 }) }}" >
                 <img src="{{ file.getUrl( sizes[size] ) }}" alt="{{ file.alt }}" />
             </picture>
             {% elseif file.kind == "video" %}
@@ -156,7 +162,7 @@
             {% else %}
             <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 55 }) }}" >
             <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 65 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
+            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
             {% endif %}
         </picture>
         {% elseif file.kind == "video" %}
@@ -168,7 +174,7 @@
     {% endif %}
 
     {% if block.type == "quote" %}
-    <div class="quote col {{ block.quote_image is not empty ? " col--large" : "" }}">
+    <div class="quote col{{ block.quote_image is not empty ? " col--large col--expand" : "" }}">
         {% if block.quote_image is not empty %}
         {% set file = block.quote_image.one() %}
         <picture>
