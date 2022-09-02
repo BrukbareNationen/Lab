@@ -1,13 +1,10 @@
 :root {
     --blue: #1f3767;
     --black: #141414;
-    --my: 2rem;
-    --col: 680px;
-    --col-small: 480px;
-    --col-large: 1080px;
-    --font-pri: 'PT Serif', serif;
-    --font-sec: tiempos, serif;
-    --font-ter: adelle, sans-serif
+    --my: 3rem;
+    --font-pri: pt-serif-pro, serif;
+    --font-sec: contralto-big, "Tiempos Headline", serif;
+    --font-ter: adelle, "Adelle Sans", sans-serif
 }
 * {
     margin: 0;
@@ -49,7 +46,6 @@ a:before {
     height: 2px;
     width: 100%;
     background-color: var(--blue);
-    -webkit-transition: .2s ease;
     transition: .2s ease
 }
 a:hover:before {
@@ -57,6 +53,43 @@ a:hover:before {
 }
 a.nodec::before {
     display: none
+}
+.appear {
+    opacity: 0;
+    transform: translate(0, 1rem);
+    transition: 1s ease-out;
+}
+.appeared {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+}
+p {
+    font-family: var(--font-pri);
+    font-weight: 100;
+    color: var(--black);
+    margin-block: 1rem;
+    font-size: 1.05rem;
+}
+h3 {
+    font-family: var(--font-ter);
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+picture img {
+    max-width: 100%;
+    display: block;
+}
+figcaption {
+    margin-top: 10px;
+    text-align: center;
+}
+figcaption p {
+    font-family: var(--font-ter);
+    font-size: .85rem;
+    line-height: 1.3;
+    margin: 0;
 }
 
 /* Nav */
@@ -121,36 +154,32 @@ a.nodec::before {
 article header {
     height: 100vh;
     text-align: center;
-    background: #1f3767;
+    background: var(--blue);
+    color: white;
 }
 h1 {
-    font-size: 50px;
-    margin-block: 30px;
+    font-family: var(--font-sec);
+    font-size: 80px;
+    padding: 10vh 0 3vh;
+}
+.leadin p {
+    font-size: 1.55rem;
+    text-align: center;
+    font-weight: 300;
 }
 .meta {
     font: .85rem var(--font-ter);
-    margin: 3rem 0;
+    margin-block: 3rem;
     text-align: center;
-    width: 100%
 }
-.meta__byline {
+.authors {
     margin-bottom: 1.5rem
 }
-.meta__author {
+.authors div {
     margin-bottom: .2rem
 }
-.leadin {
-    margin-bottom: 2rem;
-    font: 1.55rem/1.4 var(--font-sec);
-    text-align: center;
-    font-weight: 100
-}
-
 
 /* Content */
-picture img {
-    max-width: 100%;
-}
 .image-double {
     display: flex; 
     flex-wrap: wrap;
@@ -161,6 +190,51 @@ picture img {
     width: var(--col);
     max-width: 100%;
     padding-inline: 1rem;
+}
+.quote {
+    position: relative;
+}
+.quote img {
+    width: var(--col);
+}
+.quote-content {
+    padding-inline: 4rem 2rem;
+}
+.quote picture + .quote-content {
+    position: absolute;
+    top: 50%;
+    max-width: 60%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.quote-text {
+    text-indent: -2rem;
+}
+.quote-text.appear {
+    transform: translate(-2rem, 0);
+}
+.quote-text div {
+    background: #ebedef;
+    padding: 8px 12px;
+    font-family: var(--font-sec);
+    font-size: 32px;
+    display: inline;
+    line-height: 1.8;
+    font-weight: bold;
+    text-indent: -2rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+.quote-name {
+    font-family: var(--font-ter);
+    font-weight: normal;
+    font-size: .88rem;
+    text-align: right;
+    margin-top: .5rem;
+    opacity: .8;
+}
+.quote-name.appear {
+    transform: translate(2rem, 0);
 }
 
 /* Story */
