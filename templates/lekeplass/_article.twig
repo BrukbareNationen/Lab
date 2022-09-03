@@ -88,7 +88,7 @@
         <div class="authors">
             <div>Tekst: <a href="mailto:fredrik.holtekjolen@nationen.no">Fredrik Holtekjølen</a></div>
             <div>Foto: <a href="mailto:vilma.taubo@nationen.no">Vilma Taubo</a></div>
-            <div>Utvikling: <a href="mailto:jarand.ullestad@nationen.no">Jarand Ullestad</a></div>
+            <div>Utivkling: <a href="mailto:jarand.ullestad@nationen.no">Jarand Ullestad</a></div>
         </div>
     </div>
 
@@ -174,6 +174,21 @@
     {% endif %}
 
     {% if block.type == "quote" %}
+    
+    {% if block.quote_presentation %}
+        <div class="full-quote">
+        {% set file = block.quote_image.one() %}
+        <picture>
+            <img src="{{ file.getUrl({ mode: 'fit', width: widths.standard }) }}" alt="{{ file.alt }}" />
+        </picture>
+        <div class="quote-content">
+            <div class="quote-text appear">
+                <div>{{ block.quote_content }}</div>
+            </div>
+            {% if block.quote_name is not empty %}<div class="quote-name appear">{{ block.quote_name }}</div>{% endif %}
+        </div>
+    </div>
+    {% else %}
     <div class="quote col{{ block.quote_image is not empty ? " col--large col--expand" : "" }}">
         {% if block.quote_image is not empty %}
         {% set file = block.quote_image.one() %}
@@ -188,6 +203,8 @@
             {% if block.quote_name is not empty %}<div class="quote-name appear">{{ block.quote_name }}</div>{% endif %}
         </div>
     </div>
+    {% endif %}
+
     {% endif %}
 
     {% endfor %}

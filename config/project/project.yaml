@@ -1,4 +1,4 @@
-dateModified: 1662024395
+dateModified: 1662148266
 email:
   fromEmail: jarand.ullestad@nationen.no
   fromName: Lab
@@ -69,6 +69,7 @@ meta:
     e047e5e6-5c22-427b-98d9-c46362778e62: Bildetekst # Bildetekst
     e4a678d6-f77c-4f7a-9595-6ff1431114a6: Media # Media
     e6d5362a-65e2-4487-9c94-4c3b8c8e48bf: Lekeplass-felter # Lekeplass-felter
+    e11abe6b-dfd9-47d5-a305-4318ff587455: Presentasjon # Presentasjon
     e87bca4b-bd9f-4e75-ad15-c710228e9e8d: Deletittel # Deletittel
     e530a35c-13f0-4c67-b1dd-851c2391b99e: 'Public Schema' # Public Schema
     ebbc7b86-4a69-44bd-b81d-a1e10ea6c419: Kode # Kode

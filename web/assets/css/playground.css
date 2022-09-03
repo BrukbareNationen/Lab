@@ -234,6 +234,27 @@ h1 {
 .quote-name.appear {
     transform: translate(2rem, 0);
 }
+.full-quote {
+    position: relative;
+}
+.full-quote picture {
+    position: sticky;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.full-quote img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.full-quote .quote-content {
+    height: 100vh;
+    max-width: var(--col);
+    margin: 0 auto;
+}
 
 /* Story */
 .story {
