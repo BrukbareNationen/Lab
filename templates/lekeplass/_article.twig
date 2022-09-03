@@ -176,11 +176,18 @@
     {% if block.type == "quote" %}
     
     {% if block.quote_presentation %}
-        <div class="full-quote">
+    <div class="full-quote">
         {% set file = block.quote_image.one() %}
-        <picture>
-            <img src="{{ file.getUrl({ mode: 'fit', width: widths.standard }) }}" alt="{{ file.alt }}" />
-        </picture>
+        {% set dir = file.width < file.height ? "portrait" : "landscape"  %}
+        {% if dir == "portrait" %}
+        <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 55 }) }}" >
+        <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 65 }) }}" >
+        <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" />
+        {% else %}
+        <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 55 }) }}" >
+        <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
+        <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
+        {% endif %}
         <div class="quote-content">
             <div class="quote-text appear">
                 <div>{{ block.quote_content }}</div>
