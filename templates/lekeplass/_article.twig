@@ -229,6 +229,44 @@
 
     {% endif %}
 
+    {% if block.type == "facts" %}
+    <div class="col">
+        <div class="facts">
+            <div class="facts-pre-title">Fakta</div>
+            <h4>{{ block.fact_title }}</h4>
+            <div class="facts-content">{{ block.fact_content }}</div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if block.type == "route_stage" %}
+    <div class="route" data-section="{{ block.route_name }}">
+        <div class="route-content">
+            {% if block.route_media is not empty %}
+            {% set file = block.route_media.one() %}
+            {% if file.kind == "image" %}
+            <picture>
+                <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
+                <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
+            </picture>
+            {% elseif file.kind == "video" %}
+            <video>
+                <source src="{{ file.url }}" type="{{ file.mimeType }}" playsinline muted loop>
+            </video>
+            {% endif %}
+            {% endif %}
+            <div class="route-header">
+                <div class="route-pre-headline">{{ block.route_time|time('short') }}</div>
+                <div class="route-headline">
+                    <h2>{{ block.route_title }}</h2>
+                </div>
+            </div>
+            <div class="route-map-target"></div>
+        </div>
+        <div class="route-trigger"></div>
+    </div>
+    {% endif %}
+
     {% endfor %}
 
     <div class="meta col">
@@ -268,67 +306,7 @@
     </div>
 </footer>
 
-{% js %}
-
-/* Appear */
-
-const appearObs = new IntersectionObserver(e => {
-    e.forEach(entry => {
-        let t = entry.target
-        if (entry.isIntersecting) t.classList.add('appeared')
-    })
-})
-const appearElements = document.querySelectorAll('.appear')
-appearElements.forEach(e => appearObs.observe(e))
-
-/* Story */
-
-// Build
-let natStories = document.querySelectorAll(".story"), id = 1;
-natStories.forEach(s => {
-    s.dataset.story = id; id++;
-    let rect = s.getBoundingClientRect();
-    let storyContent = s.querySelectorAll(".story__background, .story__trigger"), i = 0;
-    let bg = s.querySelectorAll(".story__background");
-    storyContent.forEach(e => {
-        if (e.className == "story__background") { 
-            i++; e.dataset.storyId = i;
-            if (i == 1 && rect.y > 0) e.dataset.storyState = "active";
-            else if (i == bg.length && rect.y < 0) e.dataset.storyState = "active";
-        }
-        else if (e.classList.contains("story__trigger")) e.dataset.storyControl = i;
-    });
-})
-// Observe
-var elementObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        let t = entry.target
-        if (entry.isIntersecting) {
-            let s = t.parentNode,
-                tId = parseInt(t.dataset.storyControl),
-                tBg = s.querySelector(".story__background[data-story-id='" + tId + "']"),
-                prevBg = s.querySelector(".story__background[data-story-id='" + (tId - 1) + "']"),
-                nextBg = s.querySelector(".story__background[data-story-id='" + (tId + 1) + "']"),
-                hasState = s.querySelectorAll('[data-story-state]')
-            hasState.forEach(e => { delete e.dataset.storyState; })
-            t.dataset.storyState = tBg.dataset.storyState = "active"
-            if (prevBg !== null) prevBg.dataset.storyState = "prev"
-            if (nextBg !== null) nextBg.dataset.storyState = "next"
-            Typewriter.Init(t)
-        }
-        else {
-            delete t.dataset.storyState
-        }
-    })
-}, { 
-    threshold: 0.4
-})
-var storyElement = document.querySelectorAll('.story__trigger')
-storyElement.forEach((e) => {
-    elementObserver.observe(e)
-})
-
-{% endjs %}
+{% js "../assets/js/playground.js" %}
 
 </body>
 </html>

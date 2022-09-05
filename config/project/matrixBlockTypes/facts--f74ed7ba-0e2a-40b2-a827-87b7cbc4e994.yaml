@@ -1,0 +1,78 @@
+field: 7e98ec3a-8e3d-4d66-a22b-335820e54f2f # Innholdsblokker
+fieldLayouts:
+  a1509bb0-aefc-4568-b1eb-a636fffa0a06:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a584297b-7165-4de1-9bdc-9663bed478a3 # Tittel
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b4c0f3f1-b22f-4519-84e2-0abbc259f576 # Innhold
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  a584297b-7165-4de1-9bdc-9663bed478a3: # Tittel
+    columnSuffix: rnrhgpgf
+    contentColumnType: text
+    fieldGroup: null
+    handle: fact_title
+    instructions: ''
+    name: Tittel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b4c0f3f1-b22f-4519-84e2-0abbc259f576: # Innhold
+    columnSuffix: lcusfmei
+    contentColumnType: text
+    fieldGroup: null
+    handle: fact_content
+    instructions: ''
+    name: Innhold
+    searchable: false
+    settings:
+      availableTransforms: ''
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Custom.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: facts
+name: Fakta
+sortOrder: 9

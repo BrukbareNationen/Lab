@@ -1,11 +1,20 @@
 field: 7e98ec3a-8e3d-4d66-a22b-335820e54f2f # Innholdsblokker
 fieldLayouts:
-  6e5275e7-0c31-4e41-8023-14fa19a93f93:
+  2fd0126d-d982-4cbd-a24e-15cba919f2ac:
     tabs:
       -
         elements:
           -
-            fieldUid: 68377008-0f60-4896-8928-29bb940d1eda # Sitat
+            fieldUid: 172c6eb1-bade-4a7a-9d39-26378b244a47 # Media
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d951d953-3864-4994-80ae-2fb4a75a820d # Navn
             instructions: null
             label: null
             required: true
@@ -14,25 +23,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: bafe8cae-b801-4839-86d3-3efe8441aec6 # Navn
+            fieldUid: 64e77909-2b53-4677-91d9-b45655a4b73d # Tittel
             instructions: null
             label: null
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             warning: null
             width: 100
           -
-            fieldUid: 8932a9cf-f26d-44f8-8378-3c5595027879 # Bilde
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            warning: null
-            width: 100
-          -
-            fieldUid: e11abe6b-dfd9-47d5-a305-4318ff587455 # Presentasjon
+            fieldUid: 5af285df-518d-41b1-b574-d1be489993cf # Klokkeslett
             instructions: null
             label: null
             required: false
@@ -43,47 +43,28 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  8932a9cf-f26d-44f8-8378-3c5595027879: # Bilde
-    columnSuffix: null
-    contentColumnType: string
+  5af285df-518d-41b1-b574-d1be489993cf: # Klokkeslett
+    columnSuffix: ihujkeez
+    contentColumnType: time
     fieldGroup: null
-    handle: quote_image
+    handle: route_time
     instructions: ''
-    name: Bilde
+    name: Klokkeslett
     searchable: false
     settings:
-      allowSelfRelations: false
-      allowUploads: true
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      previewMode: full
-      restrictFiles: '1'
-      selectionLabel: ''
-      showSiteMenu: true
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
-      singleUploadLocationSubpath: 'Lekeplass/{owner.slug}'
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: true
-      validateRelatedElements: false
-      viewMode: list
+      max: null
+      min: null
+      minuteIncrement: 30
     translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
-  68377008-0f60-4896-8928-29bb940d1eda: # Sitat
-    columnSuffix: hpkpjfzr
+    translationMethod: none
+    type: craft\fields\Time
+  64e77909-2b53-4677-91d9-b45655a4b73d: # Tittel
+    columnSuffix: kuoirplw
     contentColumnType: text
     fieldGroup: null
-    handle: quote_content
+    handle: route_title
     instructions: ''
-    name: Sitat
+    name: Tittel
     searchable: false
     settings:
       byteLimit: null
@@ -97,11 +78,44 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  bafe8cae-b801-4839-86d3-3efe8441aec6: # Navn
-    columnSuffix: mhsrdaev
+  172c6eb1-bade-4a7a-9d39-26378b244a47: # Media
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: route_media
+    instructions: ''
+    name: Media
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+      singleUploadLocationSubpath: 'Lekeplass/{owner.slug}'
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d951d953-3864-4994-80ae-2fb4a75a820d: # Navn
+    columnSuffix: jaawcjnl
     contentColumnType: text
     fieldGroup: null
-    handle: quote_name
+    handle: route_name
     instructions: ''
     name: Navn
     searchable: false
@@ -117,21 +131,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  e11abe6b-dfd9-47d5-a305-4318ff587455: # Presentasjon
-    columnSuffix: xyctcqnp
-    contentColumnType: boolean
-    fieldGroup: null
-    handle: quote_presentation
-    instructions: ''
-    name: Presentasjon
-    searchable: false
-    settings:
-      default: false
-      offLabel: 'Statisk tekst (og bilde)'
-      onLabel: 'Scroll tekst over fullformat'
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Lightswitch
-handle: quote
-name: Sitat
-sortOrder: 5
+handle: route_stage
+name: Etappe
+sortOrder: 10
