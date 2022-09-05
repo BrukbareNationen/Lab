@@ -18,7 +18,7 @@ fieldLayouts:
 fields:
   ebbc7b86-4a69-44bd-b81d-a1e10ea6c419: # Kode
     columnSuffix: daqehlun
-    contentColumnType: text
+    contentColumnType: mediumtext
     fieldGroup: null
     handle: code
     instructions: ''
@@ -28,7 +28,7 @@ fields:
       byteLimit: null
       charLimit: null
       code: '1'
-      columnType: null
+      columnType: mediumtext
       initialRows: '4'
       multiline: '1'
       placeholder: null

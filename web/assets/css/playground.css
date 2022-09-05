@@ -68,7 +68,6 @@ p {
     color: var(--black);
     margin-block: 1rem;
     line-height: 1.45;
-    font-size: 1.05rem;
 }
 h3 {
     font-family: var(--font-ter);
@@ -183,9 +182,8 @@ h1 {
     background: linear-gradient(0deg, var(--black), transparent);
 }
 .leadin p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-align: center;
-    font-weight: 300;
     line-height: 1.35;
 }
 .meta {

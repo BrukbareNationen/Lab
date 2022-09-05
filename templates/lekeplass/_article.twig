@@ -18,17 +18,17 @@
     standard: {
         mode: 'fit', 
         width: widths.standard,
-        quality: 70
+        quality: 75
     },
     large: {
         mode: 'fit', 
         width: widths.large,
-        quality: 70
+        quality: 75
     },
     full: {
         mode: 'fit',
         width: widths.full,
-        quality: 70
+        quality: 75
     }
 } %}
 
@@ -122,7 +122,7 @@
             <picture>
                 <source media="(max-width: {{ breakpoints.mobile }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.mobile, quality: 55 }) }}" >
                 <source media="(max-width: {{ breakpoints.col }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.col, quality: 60 }) }}" >
-                <img src="{{ file.getUrl( sizes[size] ) }}" alt="{{ file.alt }}" />
+                <img src="{{ file.getUrl( sizes[size] ) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 75 }) }} 1280w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 680, quality: 75 }) }} 680w, {{ file.getUrl({ mode: 'fit', width: 480, quality: 75 }) }} 480w" sizes="{{ size != "full" ? "#{widths[size]}px" : "100vw" }}" alt="{{ file.alt }}" />
             </picture>
             {% elseif file.kind == "video" %}
             <video>
