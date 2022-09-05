@@ -1,4 +1,4 @@
-dateModified: 1662148266
+dateModified: 1662358532
 email:
   fromEmail: jarand.ullestad@nationen.no
   fromName: Lab
@@ -73,6 +73,7 @@ meta:
     e87bca4b-bd9f-4e75-ad15-c710228e9e8d: Deletittel # Deletittel
     e530a35c-13f0-4c67-b1dd-851c2391b99e: 'Public Schema' # Public Schema
     ebbc7b86-4a69-44bd-b81d-a1e10ea6c419: Kode # Kode
+    ebc2efa5-00ca-4580-abb5-048169bd7ae1: Hovedbilde/video # Hovedbilde/video
     ee030aea-0c21-445c-9d2f-f4311f73f422: 'Bilde/video (enkel)' # Bilde/video (enkel)
     f3aa9675-93a2-42a3-ade9-ef0269d08b19: Bilder # Bilder
     f23fb6e2-37bb-494d-a6ed-201392eee988: Oppsummering # Oppsummering

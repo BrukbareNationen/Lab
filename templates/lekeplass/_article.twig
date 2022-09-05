@@ -79,6 +79,19 @@
 
 <article>
     <header>
+        {% set top_media = entry.header_media.one() %}
+        <div class="header-media">
+            {% if top_media.kind == "image" %}
+            <picture>
+                <source media="(max-aspect-ratio: 3/4)" srcset="{{ top_media.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
+                <img src="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ top_media.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ top_media.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ top_media.alt }}" />
+            </picture>
+            {% elseif top_media.kind == "video" %}
+            <video>
+                <source src="{{ top_media.url }}" type="{{ top_media.mimeType }}" playsinline muted loop>
+            </video>
+            {% endif %}
+        </div>
         <h1>{{ entry.title }}</h1>
     </header>
 
@@ -189,12 +202,12 @@
             <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
             <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
             {% endif %}
-        </div>
+        </picture>
         <div class="quote-content">
-            <div class="quote-text appear">
+            <div class="quote-text">
                 <div>{{ block.quote_content }}</div>
             </div>
-            {% if block.quote_name is not empty %}<div class="quote-name appear">{{ block.quote_name }}</div>{% endif %}
+            {% if block.quote_name is not empty %}<div class="quote-name">{{ block.quote_name }}</div>{% endif %}
         </div>
     </div>
     {% else %}

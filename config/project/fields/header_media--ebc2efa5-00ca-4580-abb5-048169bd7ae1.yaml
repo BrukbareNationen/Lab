@@ -1,0 +1,32 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e6d5362a-65e2-4487-9c94-4c3b8c8e48bf # Lekeplass-felter
+handle: header_media
+instructions: ''
+name: Hovedbilde/video
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:cdae5da6-eb49-4503-a8e3-3f29862a608c' # Media
+  singleUploadLocationSubpath: 'Lekeplass/{slug}'
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

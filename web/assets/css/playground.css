@@ -158,20 +158,35 @@ figcaption {
 
 /* Header */
 article header {
-    height: 100vh;
     text-align: center;
-    background: var(--blue);
     color: white;
+    position: relative;
+}
+.header-media {
+    z-index: -1;
+    position: sticky;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+}
+.header-media img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 h1 {
     font-family: var(--font-sec);
-    font-size: 80px;
-    padding: 10vh 0 3vh;
+    font-size: calc(5vw + 32px);
+    padding: 15vh 3vw 7vh;
+    line-height: 1.3;
+    font-weight: 700;
+    background: linear-gradient(0deg, var(--black), transparent);
 }
 .leadin p {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: 300;
+    line-height: 1.35;
 }
 .meta {
     font: .85rem var(--font-ter);
