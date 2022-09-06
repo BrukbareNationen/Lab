@@ -48,7 +48,7 @@ const route = [
     },
     {
         'name': 'Ørsta sentrum',
-        'offset': 611,
+        'offset': 61,
         'distance': 296,
         'timestamp': '2022-08-16T02:02Z',
         'ferries': 3
