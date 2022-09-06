@@ -1,13 +1,23 @@
 /* Appear */
-const appearObs = new IntersectionObserver(e => {
+const appearElements = document.querySelectorAll('.appear'),
+    appearObs = new IntersectionObserver(e => {
     e.forEach(entry => {
         let t = entry.target
         if (entry.isIntersecting) t.classList.add('appeared')
     })
 })
-const appearElements = document.querySelectorAll('.appear')
-appearElements.forEach((e) => { appearObs.observe(e) })
+appearElements.forEach(e => { appearObs.observe(e) })
 
+/* Video autoplay */
+const videos = document.querySelectorAll('video'),
+    videoObs = new IntersectionObserver(e => {
+    e.forEach(entry => {
+        let t = entry.target
+        if (!entry.isIntersecting && !t.paused) t.pause()
+        else if (entry.isIntersecting && t.paused) t.play()
+    })
+}, { threshold: 0.6 })
+videos.forEach(e => { videoObs.observe(e) })
 
 /* Route */ 
 const route = [
@@ -65,7 +75,8 @@ const route = [
 // Config
 let travelStatus = 0, // Array index
     routeTime = 8000,
-    __container = document.querySelector('.route-map-container'),
+    __mapContainer = document.querySelector('.route-map-container'),
+    __info = document.querySelector('.route-info'),
     __path = document.querySelector('.route-map-route'),
     __point = document.querySelector('.route-point-indicator'),
     __hours = document.querySelector('.route-hours'),
@@ -134,7 +145,8 @@ var sectionObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting && s.dataset.section) {
             let sectionName = s.dataset.section
             s.classList.add('active')
-            s.querySelector('.route-map-target').append(__container)
+            s.querySelector('.route-map-target').append(__mapContainer)
+            s.querySelector('.route-info-target').append(__info)
             travelTo(sectionName)
         }
         else s.classList.remove('active')

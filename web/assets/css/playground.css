@@ -71,7 +71,7 @@ p {
 }
 h3 {
     font-family: var(--font-ter);
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-top: 2rem;
     text-transform: uppercase;
 }
@@ -171,7 +171,7 @@ article header {
     width: 100%;
     top: 0;
 }
-.header-media img {
+.header-media img, .header-media video {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -209,8 +209,7 @@ h1 {
     gap: .5rem;
 }
 .image-double figcaption {
-    width: var(--col);
-    max-width: 100%;
+    width: 100%;
     padding-inline: 1rem;
 }
 .quote {

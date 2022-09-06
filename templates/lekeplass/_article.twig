@@ -87,8 +87,8 @@
                 <img src="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ top_media.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ top_media.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ top_media.alt }}" />
             </picture>
             {% elseif top_media.kind == "video" %}
-            <video>
-                <source src="{{ top_media.url }}" type="{{ top_media.mimeType }}" playsinline muted loop>
+            <video playsinline muted loop>
+                <source src="{{ top_media.url }}" type="{{ top_media.mimeType }}">
             </video>
             {% endif %}
         </div>
@@ -125,8 +125,8 @@
                 <img src="{{ file.getUrl( sizes[size] ) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 75 }) }} 1280w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 680, quality: 75 }) }} 680w, {{ file.getUrl({ mode: 'fit', width: 480, quality: 75 }) }} 480w" sizes="{{ size != "full" ? "#{widths[size]}px" : "100vw" }}" alt="{{ file.alt }}" />
             </picture>
             {% elseif file.kind == "video" %}
-            <video>
-                <source src="{{ file.url }}" type="{{ file.mimeType }}" playsinline muted loop>
+            <video playsinline muted loop>
+                <source src="{{ file.url }}" type="{{ file.mimeType }}">
             </video>
             {% endif %}
             {% if block.caption is not empty %}
@@ -261,11 +261,7 @@
                     <div class="route-headline">
                         <h2>{{ block.route_title }}</h2>
                     </div>
-                    <div class="route-info"> 
-                        <div><span class="route-hours"></span> timer <span class="route-minutes"></span> minutter</div>
-                        <div><span class="route-distance"></span> km</div>
-                        <div><span class="route-ferries"></span> ferge(r)</div>
-                    </div>
+                    <div class="route-info-target"></div>
                 </div>
                 <div class="route-map-target"></div>
             </div>
@@ -277,7 +273,7 @@
     {% endfor %}
 
     <div class="meta col">
-        <div class="published">Publisert: 5. september 2022</div>
+        <div class="published">Publisert: 7. september 2022</div>
     </div>
 </article>
 
@@ -285,7 +281,7 @@
     <div class="col col--large col--split">
         <div class="footer__logo">                    
             <a href="https://nationen.no" class="nodec">
-                <img src="./assets/images/nationen-full-hvit.svg" loading="lazy">
+                <img src="../assets/img/nationen-full-hvit.svg" loading="lazy">
             </a>
         </div>
         <div class="footer__meta">
@@ -303,8 +299,8 @@
                 Nationen arbeider etter <a href="http://presse.no/Etisk-regelverk/Vaer-Varsom-plakaten/">Vær varsom-plakatens regler</a> for god presseskikk.
             </div>
             <div>
-                <img style="margin-right: 1rem;" src="https://tunmedia.s3.us-east-2.amazonaws.com/nationen_static/icons/rund-sort.png" loading="lazy">
-                <img src="https://tunmedia.s3.us-east-2.amazonaws.com/nationen_static/icons/NR+ansvarsmerke+svart.png" loading="lazy">
+                <img style="margin-right: 1rem;" src="../assets/img/pfu-rund-hvit.png" loading="lazy">
+                <img src="../assets/img/nored-segl.svg" loading="lazy">
             </div>
         </div>
     </div>
