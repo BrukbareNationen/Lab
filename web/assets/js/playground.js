@@ -75,7 +75,6 @@ let travelStatus = 0, // Array index
 
 // General functions
 function mToHm(min) {
-    console.log(min)
     return {'hrs': Math.floor(min / 60), 'min': min % 60}
 }
 function getLineProgressCoordinates(path, from, to, progress) {
