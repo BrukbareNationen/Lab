@@ -117,13 +117,16 @@ function travelAnimate(from, to) {
         let progress = (ms / duration).toPrecision(2) // Ratio of duration
         progress = -(Math.cos(Math.PI * progress) - 1) / 2 // Easing in/out
         let stopwatch = mToHm(Math.round(minutesFrom + (minutes * progress)))
+        let car = getLineProgressCoordinates(__path, fromInvert, toInvert, progress)
         __hours.innerHTML = stopwatch.hrs
         __minutes.innerHTML = stopwatch.min
         __ferries.innerHTML = Math.round(from.ferries + (ferries * progress))
         __distance.innerHTML = Math.round(from.distance + (distance * progress))
         __path.style.strokeDashoffset = Math.round(from.offset + (px * progress)) + 'px'
+        __point.style.cx = car.x
+		__point.style.cy = car.y
         if (ms < duration) window.requestAnimationFrame(step)
-        else (setActivePoint(__path, __point, toInvert))
+        // else (setActivePoint(__path, __point, toInvert))
     }
     window.requestAnimationFrame(step)
 }
