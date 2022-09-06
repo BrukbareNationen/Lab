@@ -255,13 +255,20 @@
             </video>
             {% endif %}
             {% endif %}
-            <div class="route-header">
-                <div class="route-pre-headline">{{ block.route_time|time('short') }}</div>
-                <div class="route-headline">
-                    <h2>{{ block.route_title }}</h2>
+            <div class="route-content-inner">
+                <div class="route-header">
+                    <div class="route-pre-headline">{{ block.route_time|time('short') }}</div>
+                    <div class="route-headline">
+                        <h2>{{ block.route_title }}</h2>
+                    </div>
+                    <div class="route-info"> 
+                        <div><span class="route-hours">0</span> timer <span class="route-minutes">0</span> minutter</div>
+                        <div><span class="route-distance">0</span> km</div>
+                        <div><span class="route-ferries">0</span> ferge(r)</div>
+                    </div>
                 </div>
+                <div class="route-map-target"></div>
             </div>
-            <div class="route-map-target"></div>
         </div>
         <div class="route-trigger"></div>
     </div>

@@ -477,6 +477,12 @@ footer {
     z-index: -1;
     transition: 1s;
 }
+.route-content-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .route-header {
 	text-align: center;
 	padding-top: 5vh;
@@ -499,7 +505,7 @@ footer {
 .route-info {
     font-family: 'Adelle Sans';
     font-weight: 200;
-    font-size: 20px;
+    font-size: .9rem;
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
@@ -511,7 +517,7 @@ footer {
 	position: relative;
 }
 .route-hours, .route-minutes, .route-distance, .route-ferries {
-	font-size: 40px;
+	font-size: 1.8rem;
 	line-height: 1;
 	font-family: contralto-big, "Contralto Big", tiempos_semibold, "Tiempos Headline";
 }
@@ -562,4 +568,30 @@ footer {
 }
 .route.active img {
     filter: brightness(.2);
+}
+.route-point-indicator {
+    animation: pulse 1.5s infinite;
+    transform: scale(1);
+    fill: #e22484;
+    stroke-width: 2px;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(.95);
+    }
+    70% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(.95);
+    }
+}
+
+@media screen and (min-width:680px) {
+    .route-info {
+        font-size: 1.3rem;
+    }
+    .route-hours, .route-minutes, .route-distance, .route-ferries {
+        font-size: 2.8rem;
+    }
 }

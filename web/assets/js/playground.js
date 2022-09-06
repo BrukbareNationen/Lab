@@ -34,21 +34,21 @@ const route = [
     },
     {
         'name': 'Molde ferjekai',
-        'offset': 435,
+        'offset': 433,
         'distance': 177,
         'timestamp': '2022-08-15T22:45Z',
         'ferries': 1
     },
     {
         'name': 'Solavågen ferjekai',
-        'offset': 189,
+        'offset': 188,
         'distance': 200,
         'timestamp': '2022-08-16T00:40Z',
         'ferries': 2
     },
     {
         'name': 'Ørsta sentrum',
-        'offset': 66,
+        'offset': 611,
         'distance': 296,
         'timestamp': '2022-08-16T02:02Z',
         'ferries': 3
@@ -64,9 +64,10 @@ const route = [
 
 // Config
 let travelStatus = 0, // Array index
-    routeTime = 7000,
+    routeTime = 8000,
     __container = document.querySelector('.route-map-container'),
     __path = document.querySelector('.route-map-route'),
+    __point = document.querySelector('.route-point-indicator'),
     __hours = document.querySelector('.route-hours'),
     __minutes = document.querySelector('.route-minutes'),
     __ferries = document.querySelector('.route-ferries'),
@@ -82,6 +83,12 @@ function getLineProgressCoordinates(path, from, to, progress) {
     pt = path.getPointAtLength(px)
     return {'x': Math.round(pt.x), 'y': Math.round(pt.y)}
 }
+function setActivePoint(path, point, px) {
+    pt = path.getPointAtLength(px)
+    point.style.cx = pt.x
+    point.style.cy = pt.y
+    point.style.transformOrigin = pt.x + "px " + pt.y + "px"
+}
 
 // Animate
 function travelAnimate(from, to) {
@@ -92,11 +99,13 @@ function travelAnimate(from, to) {
     let minutesFrom = ((new Date(from.timestamp)) - (new Date(route[0].timestamp))) / 60000
     let distance = to.distance - from.distance
     let ferries = to.ferries - from.ferries
+    let toInvert = route[0].offset - to.offset
+	let fromInvert = route[0].offset - from.offset
     function step(t) {
         if (!s) s = t // First frame timestamp
         let ms = t - s // Ms passed
         let progress = (ms / duration).toPrecision(2) // Ratio of duration
-        progress = -(Math.cos(Math.PI * progress) - 1) / 2
+        progress = -(Math.cos(Math.PI * progress) - 1) / 2 // Easing in/out
         let stopwatch = mToHm(Math.round(minutesFrom + (minutes * progress)))
         __hours.innerHTML = stopwatch.hrs
         __minutes.innerHTML = stopwatch.min
@@ -104,6 +113,7 @@ function travelAnimate(from, to) {
         __distance.innerHTML = Math.round(from.distance + (distance * progress))
         __path.style.strokeDashoffset = Math.round(from.offset + (px * progress)) + 'px'
         if (ms < duration) window.requestAnimationFrame(step)
+        else (setActivePoint(__path, __point, toInvert))
     }
     window.requestAnimationFrame(step)
 }
