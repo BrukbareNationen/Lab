@@ -123,7 +123,7 @@
             <picture>
                 <source media="(max-width: {{ breakpoints.mobile }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.mobile, quality: 55 }) }}" >
                 <source media="(max-width: {{ breakpoints.col }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.col, quality: 60 }) }}" >
-                <img src="{{ file.getUrl( sizes[size] ) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 75 }) }} 1280w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 680, quality: 75 }) }} 680w, {{ file.getUrl({ mode: 'fit', width: 480, quality: 75 }) }} 480w" sizes="{{ size != "full" ? "#{widths[size]}px" : "100vw" }}" alt="{{ file.alt }}" />
+                <img src="{{ file.getUrl( sizes[size] ) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 75 }) }} 1280w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 680, quality: 75 }) }} 680w, {{ file.getUrl({ mode: 'fit', width: 480, quality: 75 }) }} 480w" sizes="{{ size != "full" ? "#{widths[size]}px" : "100vw" }}" alt="{{ file.alt }}" loading="lazy" />
             </picture>
             {% elseif file.kind == "video" %}
             <video playsinline muted loop>
@@ -144,7 +144,7 @@
             {% for image in images %}
             {% set dir = image.width < image.height ? { mode: 'fit', width: 457.5 } : { mode: 'crop', width: 760 }  %}
             <picture>
-                <img src="{{ image.getUrl( dir ) }}" alt="{{ image.alt }}" />
+                <img src="{{ image.getUrl( dir ) }}" alt="{{ image.alt }}" loading="lazy" />
             </picture>
             {% endfor %}
             {% if block.caption is not empty %}
@@ -173,11 +173,11 @@
             {% if dir == "portrait" %}
             <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 55 }) }}" >
             <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" />
+            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" loading="lazy" />
             {% else %}
             <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 55 }) }}" >
             <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
+            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
             {% endif %}
         </picture>
         {% elseif file.kind == "video" %}
@@ -198,11 +198,11 @@
             {% if dir == "portrait" %}
             <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 55 }) }}" >
             <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" />
+            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" loading="lazy" />
             {% else %}
             <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 55 }) }}" >
             <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
+            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
             {% endif %}
         </picture>
         <div class="quote-content">
@@ -249,7 +249,7 @@
             {% if file.kind == "image" %}
             <picture>
                 <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-                <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" />
+                <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
             </picture>
             {% elseif file.kind == "video" %}
             <video>
