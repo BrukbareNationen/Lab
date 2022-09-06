@@ -142,7 +142,7 @@
         <figure class="image-double">
             {% for image in images %}
             <picture>
-                <img src="{{ image.getUrl({ mode: 'fit', height: 560, quality: 70 }) }}" alt="{{ image.alt }}" />
+                <img src="{{ image.getUrl({ mode: 'fit', height: 640, quality: 70 }) }}" alt="{{ image.alt }}" />
             </picture>
             {% endfor %}
             {% if block.caption is not empty %}

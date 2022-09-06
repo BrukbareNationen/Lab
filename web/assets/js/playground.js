@@ -41,10 +41,24 @@ const route = [
     },
     {
         'name': 'Solavågen ferjekai',
-        'offset': 300,
+        'offset': 189,
         'distance': 200,
         'timestamp': '2022-08-16T00:40Z',
         'ferries': 2
+    },
+    {
+        'name': 'Ørsta sentrum',
+        'offset': 66,
+        'distance': 296,
+        'timestamp': '2022-08-16T02:02Z',
+        'ferries': 3
+    },
+    {
+        'name': 'Abonnent',
+        'offset': 0,
+        'distance': 316,
+        'timestamp': '2022-08-16T02:33Z',
+        'ferries': 3
     }
 ]
 

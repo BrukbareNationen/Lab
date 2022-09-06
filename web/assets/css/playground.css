@@ -475,7 +475,7 @@ footer {
     object-fit: cover;
     position: absolute;
     z-index: -1;
-    transition: 2s;
+    transition: 1s;
 }
 .route-header {
 	text-align: center;
@@ -523,17 +523,16 @@ footer {
 }
 .route-map-coastline {
 	fill:none;
-	stroke:var(--color);
+	stroke: var(--color);
 	stroke-width:0.5;
 	opacity: .8;
 	stroke-linecap:round;
 	stroke-linejoin:round;
 	stroke-miterlimit:10;
-	filter: drop-shadow(0px 0px 3px var(--color));
+	/* filter: drop-shadow(0px 0px 3px var(--color)); */
 }
 .route-map-route { 
     fill:none;
-	opacity: .6;
 	stroke-width: 4px;
 	stroke-linecap:round;
 	stroke-linejoin:round;
@@ -541,6 +540,7 @@ footer {
 	stroke-dasharray: 980px; 
 	stroke-dashoffset: 980px;
 	transition: .1s;
+    stroke: #e22484;
 }
 .route-map-annotation circle {
 	/* r: 5px; */
