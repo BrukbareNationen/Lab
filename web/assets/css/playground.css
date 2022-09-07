@@ -33,26 +33,13 @@ video {
     max-width: 100%
 }
 a {
-    position: relative;
+    color: inherit;
+    text-underline-offset: 2px;
+    text-decoration-color: var(--theme);
+    text-decoration-thickness: 2px;
+}
+a:hover {
     text-decoration: none;
-    color: inherit
-}
-a:before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    bottom: 1px;
-    height: 2px;
-    width: 100%;
-    background-color: var(--theme);
-    transition: .2s ease
-}
-a:hover:before {
-    width: 0
-}
-a.nodec::before {
-    display: none
 }
 .appear {
     opacity: 0;
@@ -196,6 +183,11 @@ h1 {
     text-align: center;
     font-weight: 300;
 }
+.self-ad {
+    margin-block: 4rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
 .authors {
     margin-bottom: 1.5rem
 }
@@ -294,6 +286,33 @@ h1 {
     font-size: 1.1rem;
     color: var(--theme);
 }
+.facts-content {
+    max-height: 80px;
+    overflow-y: hidden;
+    transition: .5s ease-out;
+    position: relative;
+}
+.facts-content:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "Les mer";
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: .9rem;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, white 30%, #ffffff66);
+    cursor: pointer;
+    font-weight: 300;
+}
+.facts-content.expanded {
+    max-height: 400px;
+}
+.facts-content.expanded:after {
+    opacity: 0;
+}  
 .facts li, .facts p {
     font-size: 0.9rem;
     margin-bottom: 0.4rem;
@@ -360,7 +379,7 @@ footer {
         margin-top: 0;
         position: absolute;
         top: 50%;
-        max-width: 60%;
+        max-width: 55%;
         right: 0;
         transform: translateY(-50%);
     }
@@ -389,7 +408,8 @@ footer {
     height: 100vh;
 }
 .route-trigger {
-	height: 120vh;
+	height: 100vh;
+    margin-top: 20vh;
 }
 .route-content img {
     height: 100%;

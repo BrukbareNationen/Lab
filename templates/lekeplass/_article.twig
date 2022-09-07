@@ -236,7 +236,7 @@
         <div class="facts">
             <div class="facts-pre-title">Fakta</div>
             <h4>{{ block.fact_title }}</h4>
-            <div class="facts-content">{{ block.fact_content }}</div>
+            <div class="facts-content" onclick="this.classList.toggle('expanded')">{{ block.fact_content }}</div>
         </div>
     </div>
     {% endif %}
@@ -276,6 +276,7 @@
 
     <div class="meta col">
         <div class="published">Publisert: 7. september 2022</div>
+        <div class="self-ad"><a href="#">Vil du lese flere reportasjer? Prøv Nationen i 10 uker for 10 kroner.</a></div>
     </div>
 </article>
 
