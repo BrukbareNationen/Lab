@@ -130,8 +130,9 @@ function travelAnimate(from, to) {
         __ferries.innerHTML = Math.round(from.ferries + (ferries * progress))
         __distance.innerHTML = Math.round(from.distance + (distance * progress))
         __path.style.strokeDashoffset = Math.round(from.offset + (px * progress)) + 'px'
-        __point.style.cx = car.x
-		__point.style.cy = car.y
+        // __point.style.cx = car.x
+		// __point.style.cy = car.y
+        __point.style.transform = `translate(${car.x}px, ${car.y}px)`
         if (ms < duration) window.requestAnimationFrame(step)
         // else (setActivePoint(__path, __point, toInvert))
     }
