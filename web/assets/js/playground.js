@@ -25,7 +25,14 @@ const route = [
         'name': 'Trykk',
         'offset': 980,
         'distance': 0,
-        'timestamp': '2022-08-15T14:15Z',
+        'timestamp': '2022-08-15T14:51Z',
+        'ferries': 0      
+    },
+    {
+        'name': 'I trykken',
+        'offset': 980,
+        'distance': 0,
+        'timestamp': '2022-08-15T14:53Z',
         'ferries': 0      
     },
     {
@@ -150,7 +157,8 @@ var sectionObserver = new IntersectionObserver((entries) => {
             s.classList.add('active')
             s.querySelector('.route-map-target').append(__mapContainer)
             s.querySelector('.route-info-target').append(__info)
-            travelTo(sectionName)
+            console.log("Intersecting")
+            setTimeout(() => { travelTo(sectionName); console.log("Traveling") }, 1000)
         }
         else s.classList.remove('active')
     })

@@ -1,6 +1,6 @@
 :root {
     --theme: #1f3767;
-    --black: #141414;
+    --black: #202020;
     --my: 3rem;
     --font-pri: pt-serif, serif;
     --font-sec: contralto-big, "Tiempos Headline", serif;
@@ -67,7 +67,8 @@ p {
     font-family: var(--font-pri);
     color: var(--black);
     margin-block: 1rem;
-    line-height: 1.45;
+    line-height: 1.5;
+    font-size: 1.05rem;
 }
 h3 {
     font-family: var(--font-ter);
@@ -242,6 +243,7 @@ h1 {
 .quote-name {
     font-family: var(--font-ter);
     font-weight: normal;
+    font-size: .9rem;
     text-align: right;
     margin-top: .5rem;
     opacity: .8;
@@ -301,75 +303,6 @@ h1 {
 }
 .facts p:last-child {
     color: grey;
-}
-
-/* Story */
-.story {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    margin-top: 100vh
-}
-.story__background {
-    background: var(--black);
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    opacity: 0;
-    padding: 3rem 1rem 1rem;
-    margin-top: -100vh;
-    -webkit-transition: 1s opacity;
-    transition: 1s opacity;
-    visibility: hidden;
-    -webkit-box-ordinal-group: 0;
-    order: -1
-}
-.story__background[data-story-state=active],
-.story__background[data-story-state=next],
-.story__background[data-story-state=prev] {
-    visibility: visible
-}
-.story__background[data-story-state=active],
-.story__background[data-story-state=prev] {
-    opacity: 1
-}
-.story__background[data-story-state=active],
-.story__background[data-story-state=next] {
-    will-change: opacity
-}
-.story__background img,
-.story__background video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center center
-}
-.story__background video {
-    object-fit: cover
-}
-.story__trigger {
-    z-index: 100;
-    opacity: 0;
-    -webkit-transition: .5s;
-    transition: .5s;
-    padding: 45vh 1rem;
-    max-width: 600px;
-    margin: 0 auto
-}
-.story__trigger:last-of-type {
-    padding-bottom: 100vh
-}
-.story__trigger[data-story-state=active] {
-    opacity: 1
-}
-.story__trigger > div {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    color: white;
 }
 
 /* Footer */
@@ -443,7 +376,7 @@ footer {
 /* Route */
 .route {
 	--color: white;
-    --highlight: rgb(104, 232, 104);
+    --highlight: #3978f4;
 	color: var(--color);
 	fill: var(--color);
 	stroke: var(--color);
@@ -456,8 +389,7 @@ footer {
     height: 100vh;
 }
 .route-trigger {
-	min-height: 80vh;
-    margin-top: 20vh;
+	height: 120vh;
 }
 .route-content img {
     height: 100%;
@@ -565,6 +497,7 @@ footer {
     transform: scale(1);
     fill: var(--highlight);
     stroke-width: 2px;
+    transition: .1s;
 }
 @keyframes pulse {
     0% {
