@@ -32,7 +32,7 @@ const route = [
         'name': 'I trykken',
         'offset': 980,
         'distance': 0,
-        'timestamp': '2022-08-15T14:53Z',
+        'timestamp': '2022-08-15T14:51Z',
         'ferries': 0      
     },
     {

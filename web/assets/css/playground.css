@@ -223,6 +223,7 @@ h1 {
 }
 .quote-text div {
     background: #ebedef;
+    color: black;
     padding: 8px 12px;
     font-family: var(--font-sec);
     font-size: 28px;
@@ -400,7 +401,7 @@ footer {
 	fill: var(--color);
 	stroke: var(--color);
 	position: relative;
-    margin: 50px 0;
+    margin: 5rem 0;
 }
 .route-content {
     position: sticky;
@@ -431,15 +432,15 @@ footer {
 	padding-top: 5vh;
 }
 .route-pre-headline {
-	font-size: 32px;
+	font-size: 1.8rem;
 	font-weight: 200;
 	font-family: var(--font-ter)
 }
 .route-headline h2 {
-    font-size: calc(5vw + 38px);
+    font-size: calc(4vw + 38px);
     padding-inline: 5vw;
     line-height: 1.2;
-    margin-block: 0rem 1rem;
+    margin-block: .5rem 1rem;
     font-family: var(--font-sec)
 }
 .route-map-container {
@@ -513,10 +514,9 @@ footer {
     filter: brightness(.2);
 }
 .route-point-indicator {
-    animation: pulse 2s infinite;
-    transform: scale(1);
+    animation: pulse 1s infinite;
     fill: var(--highlight);
-    stroke-width: 2px;
+    stroke: none;
     transition: .1s;
 }
 @keyframes pulse {
@@ -541,4 +541,24 @@ footer {
     .route-map-annotation text {
         font-size: 23px;
     }
+}
+
+/* Dark mode */
+:root {
+    --dark: #202020;
+}
+.dark {
+    background: var(--dark);
+    color: white;
+    --theme: #c1d5ee;
+}
+.dark .col p,
+.dark .col li {
+    color: white;
+}
+.dark .facts-content:after {
+    background: linear-gradient(0deg, var(--dark) 25%, transparent);
+}
+.dark .meta path {
+    fill: var(--theme);
 }
