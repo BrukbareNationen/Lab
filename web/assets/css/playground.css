@@ -618,3 +618,6 @@ footer {
     line-height: 1;
     box-shadow: 1px 1px 7px #999999;
 }
+.ten-weeks a:hover {
+    box-shadow: none;
+}
