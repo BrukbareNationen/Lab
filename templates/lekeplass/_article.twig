@@ -13,22 +13,22 @@
         mode: 'crop', 
         width: widths.small, 
         height: 400, 
-        quality: 70
+        quality: 74
     },
     standard: {
         mode: 'fit', 
         width: widths.standard,
-        quality: 75
+        quality: 74
     },
     large: {
         mode: 'fit', 
         width: widths.large,
-        quality: 75
+        quality: 74
     },
     full: {
         mode: 'fit',
         width: widths.full,
-        quality: 75
+        quality: 74
     }
 } %}
 
@@ -45,7 +45,7 @@
     <meta property="og:url" content="SETT INN">
     <meta property="og:type" content="article">
     {% set fbimg = entry.share_image.one() %}
-    {% if fbimg %}<meta property="og:image" content="{{ fbimg.getUrl({ mode: 'crop', width: 1200, height: 629, quality: 75 }) }}">{% endif %}
+    {% if fbimg %}<meta property="og:image" content="{{ fbimg.getUrl({ mode: 'crop', width: 1200, height: 629, quality: 74 }) }}">{% endif %}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@Nationen_as">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://ekstra.nationen.no/statisk/media/nationen-logo144.png">
@@ -83,8 +83,8 @@
         <div class="header-media">
             {% if top_media.kind == "image" %}
             <picture>
-                <source media="(max-aspect-ratio: 3/4)" srcset="{{ top_media.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-                <img src="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ top_media.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ top_media.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ top_media.alt }}" />
+                <source media="(max-aspect-ratio: 3/4)" srcset="{{ top_media.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 74 }) }}" >
+                <img src="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }}" srcset="{{ top_media.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }} 2400w, {{ top_media.getUrl({ mode: 'fit', width: 1920, quality: 74 }) }} 1920w, {{ top_media.getUrl({ mode: 'fit', width: 1280, quality: 74 }) }} 1280w" sizes="100vw" alt="{{ top_media.alt }}" />
             </picture>
             {% elseif top_media.kind == "video" %}
             <video playsinline muted loop>
@@ -103,7 +103,7 @@
             <div>Foto: <a href="mailto:vilma.taubo@nationen.no">Vilma Taubo</a></div>
             <div>Utvikling: <a href="mailto:jarand.ullestad@nationen.no">Jarand Ullestad</a></div>
         </div>
-        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 434.6" style="width:2.2rem;height:2.2rem;margin-top:1.5rem;"><path fill="#4d6711" d="M0,0V434.6c55.3-24.6,124.6-39.3,200-39.3S344.7,410,400,434.6V0ZM329.1,105.9l-32,11.3V302.5H276l-30.9-32L121.8,146.7h-2.6V284l32.1,11.3v5.3H70.9v-5.3l32-11.3V116.3L73.1,105.9v-5.3h78l30.5,32,96.5,98.6h2.6v-114l-32-11.3v-5.3H329v5.3Z" onclick="document.body.classList.toggle('dark')"></path></svg></div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 434.6" style="width:2.2rem;height:2.2rem;margin-top:1.5rem;"><path fill="#4d6711" d="M0,0V434.6c55.3-24.6,124.6-39.3,200-39.3S344.7,410,400,434.6V0ZM329.1,105.9l-32,11.3V302.5H276l-30.9-32L121.8,146.7h-2.6V284l32.1,11.3v5.3H70.9v-5.3l32-11.3V116.3L73.1,105.9v-5.3h78l30.5,32,96.5,98.6h2.6v-114l-32-11.3v-5.3H329v5.3Z"></path></svg></div>
     </div>
 
     {% for block in entry.playground_matrix.all() %}
@@ -121,9 +121,9 @@
         <figure>
             {% if file.kind == "image" %}
             <picture>
-                <source media="(max-width: {{ breakpoints.mobile }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.mobile, quality: 55 }) }}" >
-                <source media="(max-width: {{ breakpoints.col }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.col, quality: 60 }) }}" >
-                <img src="{{ file.getUrl( sizes[size] ) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 75 }) }} 1280w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 75 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 680, quality: 75 }) }} 680w, {{ file.getUrl({ mode: 'fit', width: 480, quality: 75 }) }} 480w" sizes="{{ size != "full" ? "#{widths[size]}px" : "100vw" }}" alt="{{ file.alt }}" loading="lazy" />
+                <source media="(max-width: {{ breakpoints.mobile }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.mobile, quality: 74 }) }}" >
+                <source media="(max-width: {{ breakpoints.col }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.col, quality: 74 }) }}" >
+                <img src="{{ file.getUrl( sizes[size] ) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 74 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 74 }) }} 1280w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 74 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 74 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 680, quality: 74 }) }} 680w, {{ file.getUrl({ mode: 'fit', width: 480, quality: 74 }) }} 480w" sizes="{{ size != "full" ? "#{widths[size]}px" : "100vw" }}" alt="{{ file.alt }}" loading="lazy" />
             </picture>
             {% elseif file.kind == "video" %}
             <video playsinline muted loop>
@@ -171,13 +171,13 @@
         {% if file.kind == "image" %}
         <picture>
             {% if dir == "portrait" %}
-            <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 55 }) }}" >
-            <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" loading="lazy" />
+            <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 74 }) }}" >
+            <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 74 }) }}" >
+            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 74 }) }}" alt="{{ file.alt }}" loading="lazy" />
             {% else %}
-            <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 55 }) }}" >
-            <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
+            <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 74 }) }}" >
+            <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 74 }) }}" >
+            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 74 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 74 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
             {% endif %}
         </picture>
         {% elseif file.kind == "video" %}
@@ -196,13 +196,13 @@
         {% set dir = file.width < file.height ? "portrait" : "landscape"  %}
         <picture>
             {% if dir == "portrait" %}
-            <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 55 }) }}" >
-            <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 75 }) }}" alt="{{ file.alt }}" loading="lazy" />
+            <source media="(max-height: 800px)" srcset="{{ file.getUrl({ mode: 'fit', height: 800, quality: 74 }) }}" >
+            <source media="(max-height: 1280px)" srcset="{{ file.getUrl({ mode: 'fit', height: 1280, quality: 74 }) }}" >
+            <img src="{{ file.getUrl({ mode: 'fit', height: 1600, quality: 74 }) }}" alt="{{ file.alt }}" loading="lazy" />
             {% else %}
-            <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 55 }) }}" >
-            <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
+            <source media="(max-aspect-ratio: 3/4) and (max-height: 800px)" srcset="{{ file.getUrl({ mode: 'crop', width: 600, height: 800, quality: 74 }) }}" >
+            <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 74 }) }}" >
+            <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 74 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 74 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
             {% endif %}
         </picture>
         <div class="quote-content">
@@ -248,8 +248,8 @@
             {% set file = block.route_media.one() %}
             {% if file.kind == "image" %}
             <picture>
-                <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 65 }) }}" >
-                <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 75 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 75 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 55 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
+                <source media="(max-aspect-ratio: 3/4)" srcset="{{ file.getUrl({ mode: 'crop', width: 800, height: 1200, quality: 74 }) }}" >
+                <img src="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 74 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 74 }) }} 1280w" sizes="100vw" alt="{{ file.alt }}" loading="lazy" />
             </picture>
             {% elseif file.kind == "video" %}
             <video>
@@ -276,7 +276,6 @@
 
     <div class="meta col">
         <div class="published">Publisert: 7. september 2022</div>
-        <div class="self-ad"><a href="#">Vil du lese flere reportasjer? Prøv Nationen i 10 uker for 10 kroner.</a></div>
     </div>
 </article>
 

@@ -283,7 +283,7 @@ h1 {
     color: grey;
 }
 .facts h4 {
-    margin-block: 0.2rem 1rem;
+    margin-top: 0.2rem;
     font-size: 1.1rem;
     color: var(--theme);
 }
@@ -552,6 +552,9 @@ footer {
     color: white;
     --theme: #c1d5ee;
 }
+.dark h1 {
+    background: linear-gradient(0deg, var(--dark), transparent);
+}
 .dark .col p,
 .dark .col li {
     color: white;
@@ -562,6 +565,8 @@ footer {
 .dark .meta path {
     fill: var(--theme);
 }
+
+/* PS box */
 .ps {
     border: 1px solid lightgray;
     font-family: var(--font-ter);
