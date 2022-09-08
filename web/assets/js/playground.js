@@ -166,3 +166,12 @@ var sectionObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 })
 const sections = document.querySelectorAll('.route-trigger')
 sections.forEach(s => sectionObserver.observe(s))
+
+
+/* Toggle dark mode */
+function toggleDark(el) {
+    document.body.classList.toggle('dark')
+    let dark = document.body.classList.contains('dark')
+    el.innerHTML = dark ? "Bli lys ☀️" : "Gjør mørk 🌙"
+    el.parentNode.querySelector('span').innerHTML = dark ? "Hei! Du leser nå artikkelen i mørk utgave. Synes du det er rart, kan du endre til lys utgave." : "Hei! Du leser nå artikkelen i lys utgave. Ble det for kjedelig, endre til mørk!"
+}
