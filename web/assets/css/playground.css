@@ -328,7 +328,7 @@ h1 {
 /* Footer */
 footer {
     padding-block: 3rem;
-    background: #1d1d1d;
+    background: var(--black);
     color: #fff;
     font-size: .9rem;
     font-family: var(--font-ter);
@@ -564,6 +564,9 @@ footer {
 }
 .dark .meta path {
     fill: var(--theme);
+}
+.dark footer {
+    background: var(--dark);
 }
 
 /* PS box */
