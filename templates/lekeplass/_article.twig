@@ -121,7 +121,6 @@
         <figure>
             {% if file.kind == "image" %}
             <picture>
-                <source media="(max-width: {{ breakpoints.mobile }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.mobile, quality: 74 }) }}" >
                 <source media="(max-width: {{ breakpoints.col }}px)" srcset="{{ file.getUrl({ mode: 'fit', width: breakpoints.col, quality: 74 }) }}" >
                 <img src="{{ file.getUrl( sizes[size] ) }}" srcset="{{ file.getUrl({ mode: 'fit', width: 2400, quality: 74 }) }} 2400w, {{ file.getUrl({ mode: 'fit', width: 1920, quality: 74 }) }} 1920w, {{ file.getUrl({ mode: 'fit', width: 1280, quality: 74 }) }} 1280w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 74 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 960, quality: 74 }) }} 960w, {{ file.getUrl({ mode: 'fit', width: 680, quality: 74 }) }} 680w, {{ file.getUrl({ mode: 'fit', width: 480, quality: 74 }) }} 480w" sizes="{{ size != "full" ? "#{widths[size]}px" : "100vw" }}" alt="{{ file.alt }}" loading="lazy" />
             </picture>
@@ -143,7 +142,7 @@
         <figure class="image-double">
             {% for image in images %}
             {% set dir = image.width < image.height ? { mode: 'fit', width: 457.5, quality: 74 } : { mode: 'crop', width: 760, quality: 74 }  %}
-            <picture>
+            <picture class="{{ image.width < image.height ? 'portait' : 'landscape' }}">
                 <img src="{{ image.getUrl( dir ) }}" alt="{{ image.alt }}" loading="lazy" />
             </picture>
             {% endfor %}
