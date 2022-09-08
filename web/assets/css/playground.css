@@ -582,3 +582,34 @@ footer {
 .ps button:hover {
     box-shadow: none;
 }
+
+/* Ad */
+.ten-weeks {
+    font-family: var(--font-ter);
+    padding: 2rem;
+    background: beige;
+    color: var(--black);
+}
+.ten-weeks span {
+    font-weight: 300;
+    font-size: 1rem;
+}
+.ten-weeks div {
+    font-weight: 800;
+    font-size: 3.3rem;
+    font-family: 'contralto-big';
+    line-height: 1.1;
+    margin-top: 0.5rem;
+}
+.ten-weeks a {
+    display: inline-block;
+    padding: 1rem 1.2rem;
+    background: white;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1;
+    box-shadow: 1px 1px 7px #999999;
+}
