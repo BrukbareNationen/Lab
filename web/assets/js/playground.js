@@ -158,8 +158,7 @@ var sectionObserver = new IntersectionObserver((entries) => {
             s.classList.add('active')
             s.querySelector('.route-map-target').append(__mapContainer)
             s.querySelector('.route-info-target').append(__info)
-            console.log("Intersecting")
-            setTimeout(() => { travelTo(sectionName); console.log("Traveling") }, 1000)
+            setTimeout(() => { travelTo(sectionName) }, 1000)
         }
         else s.classList.remove('active')
     })
